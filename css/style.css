@@ -343,6 +343,7 @@ a { color: var(--accent); text-decoration: none; }
   margin-bottom: 18px;
 }
 .card p { font-size: 0.95rem; margin-bottom: 0; }
+.card .btn { margin-top: 14px; }
 
 /* Services */
 .service-list { display: grid; gap: 22px; margin-top: 20px; }

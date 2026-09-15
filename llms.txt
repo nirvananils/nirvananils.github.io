@@ -16,18 +16,21 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 
 ## Seiten
 
-- [Startseite](https://nirvananils.github.io/index.html): Übersicht über Person, Kompetenzen, Leistungen, Ablauf und Kontakt
-- [Über mich](https://nirvananils.github.io/about.html): Profil, beruflicher Werdegang und Arbeitsweise
-- [Schulungen](https://nirvananils.github.io/schulungen.html): Schulungsthemen, Format und Anfrage-/Buchungsformular
-- [Blog](https://nirvananils.github.io/blog.html): Artikel zu VCDS, VCP, ODIS, SFD/SFD2 und UNECE
-- [Impressum](https://nirvananils.github.io/impressum.html): Rechtliche Anbieterkennzeichnung
-- [Datenschutz](https://nirvananils.github.io/datenschutz.html): Datenschutzerklärung
+- [Startseite](https://nilswiesmann.net/index.html): Übersicht über Person, Kompetenzen, Leistungen, Ablauf und Kontakt
+- [Über mich](https://nilswiesmann.net/about.html): Profil, beruflicher Werdegang und Arbeitsweise
+- [Schulungen](https://nilswiesmann.net/schulungen.html): Schulungsübersicht (Auto-Intern-Programm + eigenes Angebot)
+- [Diagnose-Schulung](https://nilswiesmann.net/schulungen/diagnose-vcds-vcp-odis.html): VCDS, VCP &amp; ODIS im Detail
+- [SFD/SFD2/UNECE-Schulung](https://nilswiesmann.net/schulungen/sfd-sfd2-unece.html): Freischaltung und Konformität im Detail
+- [Retrofit-Schulung](https://nilswiesmann.net/schulungen/retrofit-vcds.html): Nachrüstungen mit VCDS im Detail
+- [Blog](https://nilswiesmann.net/blog.html): Artikel zu VCDS, VCP, ODIS, SFD/SFD2 und UNECE
+- [Impressum](https://nilswiesmann.net/impressum.html): Rechtliche Anbieterkennzeichnung
+- [Datenschutz](https://nilswiesmann.net/datenschutz.html): Datenschutzerklärung
 
 ## Kontakt
 
 - E-Mail: nils.wiesmann@gruppe.ai
-- Anschrift: Tulpenstiege 5, 59348 Lüdinghausen, Deutschland
+- Anschrift: c/o Auto-Intern GmbH, Building B29, Herner Str. 299, 44809 Bochum, Germany
 
 ## Hinweis
 
-Live-Domain: https://nirvananils.github.io/
+Live-Domain: https://nilswiesmann.net/

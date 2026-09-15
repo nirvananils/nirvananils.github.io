@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="diagTitle">
+  <title id="diagTitle">Abstrakte Illustration: Laptop mit Diagnose-Kurve, verbunden mit einem Steuergerät</title>
+  <g fill="none" stroke="#ff5566" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+    <rect x="60" y="70" width="200" height="130" rx="10"/>
+    <path d="M60 200 h200" />
+    <path d="M40 210 h240 l-14 20 h-212 z" />
+    <path d="M85 100 h150 v70 h-150 z" />
+    <path d="M95 150 l25 -35 l20 20 l25 -45 l25 30 l20 -15" />
+    <rect x="300" y="90" width="90" height="110" rx="10"/>
+    <path d="M320 115 h50 M320 135 h50 M320 155 h30"/>
+    <path d="M260 140 H300" stroke-dasharray="4 6"/>
+  </g>
+  <g fill="#ffb454" opacity="0.85">
+    <circle cx="280" cy="140" r="4"/>
+  </g>
+</svg>
