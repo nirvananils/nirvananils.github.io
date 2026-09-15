@@ -159,12 +159,14 @@ a { color: var(--accent); text-decoration: none; }
   display: block;
   width: 96px;
   height: 96px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center top;
+  object-position: 50% 20%;
   border-radius: 50%;
   border: 1px solid var(--surface-border);
   filter: grayscale(12%) contrast(1.03);
   margin-bottom: 14px;
+  flex-shrink: 0;
 }
 
 .hero-coords {
