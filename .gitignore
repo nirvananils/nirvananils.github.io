@@ -1,0 +1,6 @@
+# Lokale Claude-Code-Einstellungen (nicht fuer das Repo bestimmt)
+.claude/
+
+# Original-Fotodatei liegt im Projektordner zur Referenz; die Website nutzt
+# die Kopie unter img/nils.jpg
+/Nils.jpg
