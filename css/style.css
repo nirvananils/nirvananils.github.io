@@ -191,13 +191,22 @@ a { color: var(--accent); text-decoration: none; }
   flex-shrink: 0;
 }
 
+.card-image-wrap {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
 .card-image {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 16px;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.08);
 }
 
 .section-image {
