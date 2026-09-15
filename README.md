@@ -1,6 +1,6 @@
 # Nils Wiesmann — Portfolio-Website
 
-Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volkswagen-Konzern (VCDS, VCP, ODIS, SFD, UNECE, Steuergeräte-/Datensatzmodifikation).
+Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volkswagen-Konzern (VCDS, VCP, ODIS, SFD/SFD2, UNECE, Steuergeräte-/Datensatzmodifikation).
 
 ## Struktur
 

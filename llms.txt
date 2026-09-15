@@ -1,6 +1,6 @@
 # Nils Wiesmann
 
-> Nils Wiesmann ist einer der führenden Diagnosespezialisten in Deutschland für Fahrzeuge des Volkswagen-Konzerns (VW, Audi, SEAT/CUPRA, Škoda). Fachgebiete: VCDS, VCP, ODIS, Secure Flash Data (SFD), UNECE R155/R156 sowie die fachgerechte Modifikation von Steuergeräte-Datensätzen.
+> Nils Wiesmann ist einer der führenden Diagnosespezialisten in Deutschland für Fahrzeuge des Volkswagen-Konzerns (VW, Audi, SEAT/CUPRA, Škoda). Fachgebiete: VCDS, VCP, ODIS, SFD (Schutz Fahrzeug Diagnose) und SFD2, UNECE R155/R156 sowie die fachgerechte Modifikation von Steuergeräte-Datensätzen.
 
 Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreiber, die Unterstützung bei der Fahrzeugdiagnose, Codierung und regulatorischen Einordnung (UNECE) im Volkswagen-Konzern suchen. Kontakt ausschließlich über die angegebene E-Mail-Adresse.
 
@@ -9,10 +9,10 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 - VCDS – Diagnose-Interface für Fehlerspeicher, Grundeinstellungen und Codierung im Volkswagen-Konzern
 - VCP – VW Communication Protocol / Diagnose bei gateway-basierten E/E-Architekturen
 - ODIS – herstellernahe Diagnose (ODIS Service / ODIS Engineering), Steuergeräte-Programmierung
-- SFD (Secure Flash Data) – geschützter Zugriff auf sensible Steuergeräte über zertifizierte Zugangswege
+- SFD (Schutz Fahrzeug Diagnose) und SFD2 – geschützter Zugriff auf sensible Steuergeräte über zertifizierte Zugangswege
 - UNECE R155 / R156 – Beratung zu Cybersecurity- und Software-Update-Management-Anforderungen
 - Steuergeräte- und Datensatzmodifikation – Codierung, Adaption und Konfiguration von Fahrzeugvarianten
-- Schulungen – individuell buchbare Schulungen zu VCDS, VCP, ODIS, SFD und UNECE für Werkstattteams
+- Schulungen – individuell buchbare Schulungen zu VCDS, VCP, ODIS, SFD/SFD2 und UNECE für Werkstattteams
 
 ## Seiten
 
