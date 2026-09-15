@@ -145,6 +145,26 @@ a { color: var(--accent); text-decoration: none; }
   will-change: transform;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.16;
+  filter: grayscale(35%) contrast(1.1);
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(11, 15, 20, 0.35) 45%, var(--bg) 100%);
+}
+
 .hero-grid {
   position: absolute;
   inset: 0;
