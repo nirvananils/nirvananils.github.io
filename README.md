@@ -15,7 +15,8 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 ## Rechtliche Hinweise
 
 - Es wird von der Kleinunternehmerregelung (§ 19 Abs. 1 UStG) Gebrauch gemacht, daher wird keine USt-ID ausgewiesen.
-- Die E-Mail-Adresse wird clientseitig per JavaScript zusammengesetzt (`js/script.js`, `.js-email`-Klasse), um sie vor einfachen Bot-Scrapern zu verstecken. Das schützt nicht vor Bots, die JavaScript ausführen, reduziert aber Spam durch einfache Harvester deutlich.
+- E-Mail-Adressen und Telefonnummer liegen nur Base64-kodiert im HTML (`data-reveal-enc`) und werden erst nach einem echten Klick clientseitig entschlüsselt (`js/script.js`). Das schützt nicht vor Bots, die JavaScript ausführen und Klicks simulieren, reduziert aber Spam durch einfache Harvester deutlich, da die Adresse nirgends im statischen HTML im Klartext steht.
+- Es werden keine Google Fonts oder andere externe Drittanbieter-Ressourcen geladen (nur Systemschriften) — dadurch entfällt das in Deutschland bekannte rechtliche Risiko rund um IP-Übermittlung an Google-Server beim Laden von Web-Fonts.
 
 ## Lokal ansehen
 

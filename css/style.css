@@ -11,8 +11,8 @@
   --accent-soft: rgba(63, 169, 255, 0.12);
   --radius: 14px;
   --maxw: 1120px;
-  --font-head: "Space Grotesk", "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-head: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -36,9 +36,10 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-head);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
 }
 
 h2 { font-size: clamp(1.6rem, 2.4vw + 1rem, 2.4rem); }
@@ -343,6 +344,14 @@ a { color: var(--accent); text-decoration: none; }
   letter-spacing: 0.05em;
 }
 .contact-value { color: var(--text); font-weight: 500; }
+.reveal-link {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.reveal-link[data-revealed="true"] {
+  text-decoration: none;
+}
 
 /* Booking form */
 .booking-form {

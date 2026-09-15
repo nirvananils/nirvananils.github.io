@@ -3,15 +3,37 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-document.querySelectorAll(".js-email").forEach((el) => {
-  const user = el.getAttribute("data-email-user");
-  const domain = el.getAttribute("data-email-domain");
-  if (!user || !domain) return;
-  const address = `${user}@${domain}`;
-  el.setAttribute("href", `mailto:${address}`);
-  if (el.hasAttribute("data-email-text")) {
-    el.textContent = address;
-  }
+/*
+ * Kontakt-Werte (E-Mail/Telefon) liegen nur Base64-kodiert im Markup und werden
+ * erst nach einem echten Klick entschlüsselt und in href/Text geschrieben.
+ * Das verhindert, dass einfache Scraper die Adressen aus dem statischen HTML lesen.
+ */
+document.querySelectorAll("[data-reveal-enc]").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    if (el.dataset.revealed === "true") return;
+    event.preventDefault();
+
+    let value;
+    try {
+      value = atob(el.getAttribute("data-reveal-enc"));
+    } catch (e) {
+      return;
+    }
+
+    const type = el.getAttribute("data-reveal-type");
+    const href = type === "tel" ? `tel:${value.replace(/\s+/g, "")}` : `mailto:${value}`;
+    el.setAttribute("href", href);
+
+    if (el.hasAttribute("data-reveal-text")) {
+      el.textContent = type === "tel" ? value : value.split(",")[0];
+    }
+
+    el.dataset.revealed = "true";
+
+    if (el.hasAttribute("data-reveal-navigate")) {
+      window.location.href = href;
+    }
+  });
 });
 
 const navToggle = document.getElementById("navToggle");
@@ -54,11 +76,14 @@ if (bookingForm) {
       `Terminwunsch: ${termin}\n\n` +
       `Nachricht:\n${message}`;
 
-    const mailUser = bookingForm.getAttribute("data-email-user");
-    const mailDomain = bookingForm.getAttribute("data-email-domain");
-    const target = `${mailUser}@${mailDomain}`;
+    let recipients;
+    try {
+      recipients = atob(bookingForm.getAttribute("data-reveal-enc"));
+    } catch (e) {
+      return;
+    }
 
     window.location.href =
-      `mailto:${target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
