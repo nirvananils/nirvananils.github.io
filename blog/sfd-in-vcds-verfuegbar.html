@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SFD ist endlich in VCDS verfügbar | Nils Wiesmann</title>
+<meta name="description" content="SFD-Freischaltung ist jetzt auch über VCDS möglich. Ablauf, Voraussetzungen und Kosten des neuen SFD-Servicekontos im Überblick.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="logo">NW<span>.</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="../about.html">Über mich</a>
+      <a href="../index.html#kompetenzen">Kompetenzen</a>
+      <a href="../schulungen.html">Schulungen</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#leistungen">Leistungen</a>
+      <a href="../index.html#ablauf">Ablauf</a>
+      <a href="../index.html#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="container legal-page">
+    <a href="../blog.html" class="back-link">&larr; Zurück zum Blog</a>
+    <h1>SFD ist endlich in VCDS verfügbar</h1>
+    <p class="post-meta"><time datetime="2026-09-15">15. September 2026</time><span class="blog-tags">SFD · VCDS · News</span></p>
+
+    <p>Lange war SFD-Zugriff vor allem ein Thema für ODIS und herstellernahe Werkzeuge. Jetzt lässt sich ein SFD-Servicekonto auch in Verbindung mit VCDS und kompatiblen Interfaces wie HEX-NET oder HEX-V2 nutzen. Für Werkstätten, die bisher an dieser Hürde gescheitert sind, ändert sich damit einiges.</p>
+
+    <p>Was SFD (Schutz Fahrzeug Diagnose) grundsätzlich ist und wofür es gebraucht wird, habe ich bereits in <a href="sfd-und-sfd2-erklaert.html">SFD und SFD2 einfach erklärt</a> beschrieben. Hier geht es konkret um die Freischaltung in Kombination mit VCDS.</p>
+
+    <h2>Die vier Schritte zur Freischaltung</h2>
+    <p>Der Ablauf ist klar strukturiert, aber an einigen Stellen weniger selbsterklärend, als er sein könnte:</p>
+    <ol class="check-list">
+      <li><strong>Interface-Registrierung:</strong> Das HEX-NET- oder HEX-V2-Interface muss auf eine natürliche Person registriert sein — ein Firmenname allein reicht nicht aus.</li>
+      <li><strong>Software-Anforderung:</strong> Mindestens VCDS Beta 26.5 wird benötigt. Firmware und Softwareversion müssen zueinander passen, sonst drohen Authentifizierungsfehler.</li>
+      <li><strong>Kontoanmeldung mit Identitätsprüfung:</strong> Das Konto wird über den Ross-Tech-Webshop angelegt. Volkswagen verlangt volle Rückverfolgbarkeit — eine Identitätsprüfung per amtlichem Lichtbildausweis ist Pflicht, und die Ausweisdaten müssen mit der Interface-Registrierung übereinstimmen.</li>
+      <li><strong>Passwortfestlegung:</strong> Nach der E-Mail-Bestätigung wird in VCIConfig ein Passwort mit mindestens zehn Zeichen gesetzt. Aktuell gibt es dafür keinen Self-Service-Reset — bei Verlust ist also Vorsicht geboten.</li>
+    </ol>
+
+    <h2>Kosten</h2>
+    <p>Während der aktuellen Beta-Phase fallen keine Abo-Kosten an. Danach bietet Ross-Tech zwei Modelle:</p>
+    <ul class="check-list">
+      <li><strong>Enthusiast:</strong> 50 € / Jahr, 3 von 10 VIN-Zugriffen</li>
+      <li><strong>Profi:</strong> 100 € / Jahr, unbegrenzter VIN-Zugriff</li>
+    </ul>
+
+    <h2>Was das für die Werkstattpraxis bedeutet</h2>
+    <p>Der größte Stolperstein in der Praxis ist erfahrungsgemäß die Kombination aus Identitätsprüfung und Interface-Registrierung: Beides muss exakt zusammenpassen, sonst hakt es bei der Kontoanmeldung. Auch die Versionsabstimmung zwischen Firmware und VCDS-Software lohnt sich, vor der ersten Freischaltung genau zu prüfen. Wer die Einrichtung einmal sauber durchlaufen hat, hat mit SFD über VCDS eine deutlich niedrigere Einstiegshürde als über ODIS.</p>
+    <p>Bei der Einrichtung und der Einordnung, welches Kostenmodell für den eigenen Werkstattbetrieb sinnvoll ist, unterstütze ich im Rahmen meiner <a href="../schulungen.html">SFD-Schulungen</a>.</p>
+
+    <p><em>Quelle: <a href="https://www.auto-intern.de/support/sfd/ablauf/" target="_blank" rel="noopener">Auto-Intern SFD-Support — Ablauf</a></em></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <span>© <span id="year"></span> Nils Wiesmann</span>
+    <nav class="footer-nav">
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
