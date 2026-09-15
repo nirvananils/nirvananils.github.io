@@ -157,8 +157,8 @@ a { color: var(--accent); text-decoration: none; }
 
 .avatar-small {
   display: block;
-  width: 96px;
-  height: 96px;
+  width: 168px;
+  height: 168px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: 50% 20%;
@@ -167,6 +167,23 @@ a { color: var(--accent); text-decoration: none; }
   filter: grayscale(12%) contrast(1.03);
   margin-bottom: 14px;
   flex-shrink: 0;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius);
+  margin: 24px 0;
 }
 
 .hero-coords {
@@ -185,10 +202,6 @@ a { color: var(--accent); text-decoration: none; }
   opacity: 0.7;
 }
 
-@media (max-width: 860px) {
-  .col-label { display: flex; align-items: center; gap: 12px; }
-  .avatar-small { margin-bottom: 0; }
-}
 
 .eyebrow {
   font-family: var(--font-mono);
