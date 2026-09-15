@@ -36,6 +36,34 @@ document.querySelectorAll("[data-reveal-enc]").forEach((el) => {
   });
 });
 
+/* Parallax: Elemente mit data-parallax="<faktor>" verschieben sich beim
+   Scrollen um scrollY * Faktor - erzeugt Tiefe (z. B. Hero-Hintergrund
+   langsamer, Portraitfoto minimal versetzt zum Text). Deaktiviert bei
+   "reduzierte Bewegung"-Systemeinstellung. */
+const parallaxEls = document.querySelectorAll("[data-parallax]");
+if (parallaxEls.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let ticking = false;
+  const updateParallax = () => {
+    const scrollY = window.scrollY;
+    parallaxEls.forEach((el) => {
+      const speed = parseFloat(el.getAttribute("data-parallax")) || 0;
+      el.style.transform = `translate3d(0, ${(scrollY * speed).toFixed(1)}px, 0)`;
+    });
+    ticking = false;
+  };
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+  updateParallax();
+}
+
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
 

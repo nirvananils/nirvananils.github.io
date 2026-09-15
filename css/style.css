@@ -139,6 +139,10 @@ a { color: var(--accent); text-decoration: none; }
   border-bottom: 1px solid var(--surface-border);
 }
 
+[data-parallax] {
+  will-change: transform;
+}
+
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -164,7 +168,7 @@ a { color: var(--accent); text-decoration: none; }
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: 70% 25%;
+  object-position: center top;
   border-radius: 16px;
   border: 1px solid var(--surface-border);
   filter: grayscale(12%) contrast(1.03);
