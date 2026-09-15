@@ -344,6 +344,44 @@ a { color: var(--accent); text-decoration: none; }
 }
 .contact-value { color: var(--text); font-weight: 500; }
 
+/* Booking form */
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 28px 0 32px;
+  max-width: 640px;
+}
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+.form-row-full { grid-column: 1 / -1; }
+.form-row label {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.form-row textarea { resize: vertical; }
+.booking-form button[type="submit"] { border: none; cursor: pointer; }
+
+@media (max-width: 560px) {
+  .booking-form { grid-template-columns: 1fr; }
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--surface-border);

@@ -12,10 +12,12 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 - SFD (Secure Flash Data) – geschützter Zugriff auf sensible Steuergeräte über zertifizierte Zugangswege
 - UNECE R155 / R156 – Beratung zu Cybersecurity- und Software-Update-Management-Anforderungen
 - Steuergeräte- und Datensatzmodifikation – Codierung, Adaption und Konfiguration von Fahrzeugvarianten
+- Schulungen – individuell buchbare Schulungen zu VCDS, VCP, ODIS, SFD und UNECE für Werkstattteams
 
 ## Seiten
 
 - [Startseite](index.html): Übersicht über Person, Kompetenzen, Leistungen, Ablauf und Kontakt
+- [Schulungen](schulungen.html): Schulungsthemen, Format und Anfrage-/Buchungsformular
 - [Impressum](impressum.html): Rechtliche Anbieterkennzeichnung
 - [Datenschutz](datenschutz.html): Datenschutzerklärung
 

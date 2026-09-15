@@ -5,19 +5,17 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 ## Struktur
 
 - `index.html` — Startseite
-- `impressum.html` — Impressum (enthält Platzhalter, siehe unten)
+- `schulungen.html` — Schulungsübersicht mit Anfrage-/Buchungsformular (mailto-basiert, kein Server nötig)
+- `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
 - `css/style.css` — Styles
-- `js/script.js` — Mobile-Navigation
+- `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 
-## Offene Punkte vor Veröffentlichung
+## Rechtliche Hinweise
 
-Im Impressum (`impressum.html`) sind noch Platzhalter markiert mit `[BITTE ERGÄNZEN]`:
-
-- Telefonnummer
-- Umsatzsteuer-ID (falls vorhanden)
-- Gewerbeanmeldung / zuständige Kammer
+- Es wird von der Kleinunternehmerregelung (§ 19 Abs. 1 UStG) Gebrauch gemacht, daher wird keine USt-ID ausgewiesen.
+- Die E-Mail-Adresse wird clientseitig per JavaScript zusammengesetzt (`js/script.js`, `.js-email`-Klasse), um sie vor einfachen Bot-Scrapern zu verstecken. Das schützt nicht vor Bots, die JavaScript ausführen, reduziert aber Spam durch einfache Harvester deutlich.
 
 ## Lokal ansehen
 
