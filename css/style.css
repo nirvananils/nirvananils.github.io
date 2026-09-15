@@ -151,6 +151,46 @@ a { color: var(--accent); text-decoration: none; }
 
 .hero-content { position: relative; }
 
+.hero-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 70% 25%;
+  border-radius: 16px;
+  border: 1px solid var(--surface-border);
+  filter: grayscale(12%) contrast(1.03);
+}
+
+.hero-coords {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+  margin: -8px 0 20px;
+}
+
+.arrow-link::after {
+  content: "\2197";
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+@media (max-width: 860px) {
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-portrait { order: -1; max-width: 260px; margin: 0 auto 12px; }
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   color: var(--accent);
