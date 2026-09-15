@@ -5,7 +5,10 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 ## Struktur
 
 - `index.html` — Startseite
+- `about.html` — Über mich / beruflicher Werdegang
 - `schulungen.html` — Schulungsübersicht mit Anfrage-/Buchungsformular (mailto-basiert, kein Server nötig)
+- `blog.html` — Blog-Übersicht
+- `blog/*.html` — einzelne Blog-Artikel
 - `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
 - `css/style.css` — Styles
