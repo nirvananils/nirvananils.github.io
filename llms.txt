@@ -16,10 +16,10 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 
 ## Seiten
 
-- [Startseite](index.html): Übersicht über Person, Kompetenzen, Leistungen, Ablauf und Kontakt
-- [Schulungen](schulungen.html): Schulungsthemen, Format und Anfrage-/Buchungsformular
-- [Impressum](impressum.html): Rechtliche Anbieterkennzeichnung
-- [Datenschutz](datenschutz.html): Datenschutzerklärung
+- [Startseite](https://nirvananils.github.io/Ninils-wiesmann-website-diagnose/index.html): Übersicht über Person, Werdegang, Kompetenzen, Leistungen, Ablauf und Kontakt
+- [Schulungen](https://nirvananils.github.io/Ninils-wiesmann-website-diagnose/schulungen.html): Schulungsthemen, Format und Anfrage-/Buchungsformular
+- [Impressum](https://nirvananils.github.io/Ninils-wiesmann-website-diagnose/impressum.html): Rechtliche Anbieterkennzeichnung
+- [Datenschutz](https://nirvananils.github.io/Ninils-wiesmann-website-diagnose/datenschutz.html): Datenschutzerklärung
 
 ## Kontakt
 
@@ -28,4 +28,4 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 
 ## Hinweis
 
-Sobald die Seite unter einer festen Domain (z. B. GitHub Pages oder eigene Domain) veröffentlicht ist, sollten die relativen Links oben durch absolute URLs ersetzt werden, und das Feld "url" im JSON-LD in index.html sollte auf diese Domain aktualisiert werden.
+Live-Domain: https://nirvananils.github.io/Ninils-wiesmann-website-diagnose/
