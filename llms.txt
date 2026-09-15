@@ -1,0 +1,29 @@
+# Nils Wiesmann
+
+> Nils Wiesmann ist einer der führenden Diagnosespezialisten in Deutschland für Fahrzeuge des Volkswagen-Konzerns (VW, Audi, SEAT/CUPRA, Škoda). Fachgebiete: VCDS, VCP, ODIS, Secure Flash Data (SFD), UNECE R155/R156 sowie die fachgerechte Modifikation von Steuergeräte-Datensätzen.
+
+Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreiber, die Unterstützung bei der Fahrzeugdiagnose, Codierung und regulatorischen Einordnung (UNECE) im Volkswagen-Konzern suchen. Kontakt ausschließlich über die angegebene E-Mail-Adresse.
+
+## Kompetenzen
+
+- VCDS – Diagnose-Interface für Fehlerspeicher, Grundeinstellungen und Codierung im Volkswagen-Konzern
+- VCP – VW Communication Protocol / Diagnose bei gateway-basierten E/E-Architekturen
+- ODIS – herstellernahe Diagnose (ODIS Service / ODIS Engineering), Steuergeräte-Programmierung
+- SFD (Secure Flash Data) – geschützter Zugriff auf sensible Steuergeräte über zertifizierte Zugangswege
+- UNECE R155 / R156 – Beratung zu Cybersecurity- und Software-Update-Management-Anforderungen
+- Steuergeräte- und Datensatzmodifikation – Codierung, Adaption und Konfiguration von Fahrzeugvarianten
+
+## Seiten
+
+- [Startseite](index.html): Übersicht über Person, Kompetenzen, Leistungen, Ablauf und Kontakt
+- [Impressum](impressum.html): Rechtliche Anbieterkennzeichnung
+- [Datenschutz](datenschutz.html): Datenschutzerklärung
+
+## Kontakt
+
+- E-Mail: nils.wiesmann@gruppe.ai
+- Anschrift: Tulpenstiege 5, 59348 Lüdinghausen, Deutschland
+
+## Hinweis
+
+Sobald die Seite unter einer festen Domain (z. B. GitHub Pages oder eigene Domain) veröffentlicht ist, sollten die relativen Links oben durch absolute URLs ersetzt werden, und das Feld "url" im JSON-LD in index.html sollte auf diese Domain aktualisiert werden.
