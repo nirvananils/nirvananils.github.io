@@ -2,22 +2,36 @@
 
 Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volkswagen-Konzern (VCDS, VCP, ODIS, SFD/SFD2, UNECE, Steuergeräte-/Datensatzmodifikation).
 
+**Live:** [https://nilswiesmann.net/](https://nilswiesmann.net/) (Custom Domain, gehostet über GitHub Pages im Repo `nirvananils/nirvananils.github.io`)
+
 ## Struktur
 
-- `index.html` — Startseite
-- `about.html` — Über mich / beruflicher Werdegang
-- `schulungen.html` — Schulungsübersicht mit Anfrage-/Buchungsformular (mailto-basiert, kein Server nötig)
+- `index.html` — Startseite (Hero mit Portraitfoto und Parallax-Effekt, Über mich, Kompetenzen, Werdegang-Teaser, Schulungen-Teaser, Portfolio, Leistungen, Ablauf, Kontakt)
+- `about.html` — Über mich, beruflicher Werdegang, Partner-Übersicht (Kartenraster mit LHCoding, vcds.de, sfd.vcds.de, auto-intern.de)
+- `schulungen.html` — Schulungsübersicht: verlinktes offizielles Auto-Intern-Schulungsprogramm + eigenes individuelles Angebot, Anfrage-/Buchungsformular (mailto-basiert, kein Server nötig)
+- `schulungen/*.html` — Detailseiten der eigenen Schulungsthemen (Diagnose VCDS/VCP/ODIS, SFD/SFD2/UNECE, Retrofit mit VCDS), je mit eigener Illustration
 - `blog.html` — Blog-Übersicht
 - `blog/*.html` — einzelne Blog-Artikel
 - `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
-- `css/style.css` — Styles
-- `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik
+- `img/*.svg` — eigene, abstrakte Illustrationen (keine Fotos, außer dem Portraitfoto)
+- `img/nils.jpg` — Portraitfoto (Original liegt zusätzlich als `Nils.jpg` im Projektordner, aber `.gitignore`t)
+- `css/style.css` — Styles (inkl. Hero-Layout mit Portrait, Parallax-Klassen, Pfeil-Icons bei externen Links)
+- `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik, Parallax-Scrolleffekt
+- `favicon.svg`, `llms.txt` — Favicon bzw. Kurzbeschreibung der Seite für LLM-Crawler
+- `CNAME` — Custom-Domain-Konfiguration für GitHub Pages (`nilswiesmann.net`)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
+- `.gitignore` — schließt lokale Claude-Code-Einstellungen (`.claude/`) und das Root-Foto-Duplikat (`Nils.jpg`) vom Repo aus
+
+## Design-Hinweise
+
+- Hero-Bereich (Startseite + alle Unterseiten) hat einen dezenten **Parallax-Scrolleffekt**: Elemente mit `data-parallax="<Faktor>"` verschieben sich beim Scrollen anteilig zur Scroll-Position (siehe `js/script.js`). Wird bei aktivierter Systemeinstellung „Bewegung reduzieren" automatisch deaktiviert.
+- Externe Links (`target="_blank"`) tragen die Klasse `arrow-link` und bekommen automatisch ein „↗"-Symbol angehängt.
 
 ## Rechtliche Hinweise
 
 - Es wird von der Kleinunternehmerregelung (§ 19 Abs. 1 UStG) Gebrauch gemacht, daher wird keine USt-ID ausgewiesen.
+- Die im Impressum angegebene Anschrift ist eine c/o-Adresse bei Auto-Intern GmbH.
 - E-Mail-Adressen und Telefonnummer liegen nur Base64-kodiert im HTML (`data-reveal-enc`) und werden erst nach einem echten Klick clientseitig entschlüsselt (`js/script.js`). Das schützt nicht vor Bots, die JavaScript ausführen und Klicks simulieren, reduziert aber Spam durch einfache Harvester deutlich, da die Adresse nirgends im statischen HTML im Klartext steht.
 - Es werden keine Google Fonts oder andere externe Drittanbieter-Ressourcen geladen (nur Systemschriften) — dadurch entfällt das in Deutschland bekannte rechtliche Risiko rund um IP-Übermittlung an Google-Server beim Laden von Web-Fonts.
 
@@ -50,6 +64,10 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 
 Hinweis: `blog/*.html`-Dateien liegen eine Ebene tiefer als die Startseite, daher zeigen alle internen Links darin auf `../` (z. B. `../css/style.css`, `../index.html`).
 
+## Neue Schulungs-Detailseite hinzufügen
+
+Analog zum Blog: Eine bestehende Datei aus `schulungen/` duplizieren (z. B. `schulungen/diagnose-vcds-vcp-odis.html`), Titel/Beschreibung/Inhalt anpassen, bei Bedarf eine neue Illustration unter `img/` ablegen (SVG, gleicher roter Farbstil wie die bestehenden), und in `schulungen.html` im Kartenraster (`<div class="card-grid">`) einen neuen `<article class="card">`-Eintrag mit Link auf die neue Datei ergänzen. Auch hier zeigen interne Links aus dem Unterordner auf `../`.
+
 ## Lokal ansehen
 
 Einfach `index.html` im Browser öffnen, oder z. B. mit:
@@ -58,21 +76,19 @@ Einfach `index.html` im Browser öffnen, oder z. B. mit:
 npx serve .
 ```
 
-## Veröffentlichen mit GitHub Pages
+## GitHub Pages / Custom Domain
 
-1. Neues Repository auf GitHub anlegen (z. B. `nils-wiesmann-diagnose`).
-2. In diesem Ordner:
+Die Seite ist bereits veröffentlicht: Repository `nirvananils/nirvananils.github.io` (Public), **Settings → Pages → Source: Deploy from a branch → main / (root)**. Für die Custom Domain `nilswiesmann.net` liegt eine `CNAME`-Datei im Repo (wird von GitHub automatisch angelegt/aktualisiert, sobald unter Settings → Pages eine Custom Domain eingetragen wird) — der DNS-Eintrag beim Domain-Provider muss zusätzlich auf GitHub Pages zeigen.
 
-   ```
-   git init
-   git add .
-   git commit -m "Initial commit: Website Nils Wiesmann"
-   git branch -M main
-   git remote add origin https://github.com/<dein-github-nutzername>/<repo-name>.git
-   git push -u origin main
-   ```
+Für ein komplett neues, unabhängiges Projekt nach diesem Muster:
 
-3. Auf GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, Branch `main`, Ordner `/ (root)` auswählen und speichern.
-4. Nach kurzer Zeit ist die Seite unter `https://<dein-github-nutzername>.github.io/<repo-name>/` erreichbar.
+```
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/<nutzername>/<repo-name>.git
+git push -u origin main
+```
 
-Für eine eigene Domain kann zusätzlich eine `CNAME`-Datei mit dem Domainnamen angelegt werden.
+Bei einem Repo-Namen nach dem Muster `<nutzername>.github.io` wird daraus automatisch die „User Page" unter `https://<nutzername>.github.io/` (ohne Unterpfad); jeder andere Repo-Name ergibt ein „Project Page" unter `https://<nutzername>.github.io/<repo-name>/`.
