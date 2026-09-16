@@ -380,6 +380,14 @@ a { color: var(--accent); text-decoration: none; }
 }
 .card p { font-size: 0.95rem; margin-bottom: 0; }
 .card .btn { margin-top: 14px; }
+.card-price {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+}
 
 /* Services */
 .service-list { display: grid; gap: 22px; margin-top: 20px; }
@@ -523,6 +531,39 @@ a { color: var(--accent); text-decoration: none; }
 @media (max-width: 560px) {
   .booking-form { grid-template-columns: 1fr; }
 }
+
+/* Easter Egg: Konami-Code-Terminal */
+.easter-egg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 9, 13, 0.92);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  cursor: pointer;
+  animation: easterEggFade 0.2s ease;
+}
+@keyframes easterEggFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.easter-egg-terminal {
+  max-width: 560px;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text);
+  cursor: default;
+}
+.easter-egg-terminal p { margin: 0 0 6px; }
+.easter-egg-code { color: var(--accent); font-weight: 700; }
 
 /* Footer */
 .site-footer {

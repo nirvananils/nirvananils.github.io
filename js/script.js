@@ -3,6 +3,60 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+/* Easter Egg: Gruß an neugierige Entwickler in der Konsole */
+console.log(
+  "%c NW %c VCDS> Fehlerspeicher dieser Seite: leer. Guter Code. \n%cTipp: der Konami-Code (↑ ↑ ↓ ↓ ← → ← → B A) tut hier auch etwas.",
+  "background:#ff5566;color:#0d131b;font-family:monospace;font-weight:700;padding:2px 6px;border-radius:4px 0 0 4px;",
+  "background:#131a23;color:#eef2f6;font-family:monospace;padding:2px 6px;border-radius:0 4px 4px 0;",
+  "color:#9fb0c3;font-family:monospace;"
+);
+
+/* Easter Egg: Konami-Code startet eine kleine Diagnose-Terminal-Simulation */
+const konamiSequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let konamiProgress = 0;
+
+window.addEventListener("keydown", (event) => {
+  const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+  if (key === konamiSequence[konamiProgress]) {
+    konamiProgress++;
+    if (konamiProgress === konamiSequence.length) {
+      konamiProgress = 0;
+      runDiagnosticEasterEgg();
+    }
+  } else {
+    konamiProgress = key === konamiSequence[0] ? 1 : 0;
+  }
+});
+
+function runDiagnosticEasterEgg() {
+  if (document.getElementById("easterEggOverlay")) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "easterEggOverlay";
+  overlay.className = "easter-egg-overlay";
+  overlay.innerHTML = `
+    <div class="easter-egg-terminal">
+      <p>&gt; VCDS-Konami-Modus gestartet…</p>
+      <p>&gt; Verbindung zu Steuergerät 17 (Nostalgie) hergestellt.</p>
+      <p>&gt; Fehlerspeicher lesen…</p>
+      <p>&gt; 1 Eintrag gefunden:</p>
+      <p class="easter-egg-code">00042 – Kein Fehler. Nur ein Gruß von Nils an alle, die im Quellcode stöbern.</p>
+      <p>&gt; Klick irgendwo oder ESC zum Schließen.</p>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const close = () => {
+    overlay.remove();
+    window.removeEventListener("keydown", onKey);
+  };
+  const onKey = (e) => {
+    if (e.key === "Escape") close();
+  };
+  overlay.addEventListener("click", close);
+  window.addEventListener("keydown", onKey);
+}
+
 /*
  * Kontakt-Werte (E-Mail/Telefon) liegen nur Base64-kodiert im Markup und werden
  * erst nach einem echten Klick entschlüsselt und in href/Text geschrieben.
