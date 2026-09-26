@@ -23,6 +23,7 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 - [SFD/SFD2/UNECE-Schulung](https://nilswiesmann.net/schulungen/sfd-sfd2-unece.html): Freischaltung und Konformität im Detail
 - [Retrofit-Schulung](https://nilswiesmann.net/schulungen/retrofit-vcds.html): Nachrüstungen mit VCDS im Detail
 - [Blog](https://nilswiesmann.net/blog.html): Artikel zu VCDS, VCP, ODIS, SFD/SFD2 und UNECE
+- [Referenzen](https://nilswiesmann.net/referenzen.html): Ausgewählte Referenzen (Schulung von Prüforganisationen, TV-Experte)
 - [Impressum](https://nilswiesmann.net/impressum.html): Rechtliche Anbieterkennzeichnung
 - [Datenschutz](https://nilswiesmann.net/datenschutz.html): Datenschutzerklärung
 
