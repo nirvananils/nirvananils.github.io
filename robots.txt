@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /README.md
+Disallow: /ROADMAP.md
+
+Sitemap: https://nilswiesmann.net/sitemap.xml

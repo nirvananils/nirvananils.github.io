@@ -27,6 +27,8 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 - [Impressum](https://nilswiesmann.net/impressum.html): Rechtliche Anbieterkennzeichnung
 - [Datenschutz](https://nilswiesmann.net/datenschutz.html): Datenschutzerklärung
 
+- [Sitemap](https://nilswiesmann.net/sitemap.xml): Liste aller Seiten
+
 ## Kontakt
 
 - E-Mail: nils.wiesmann@gruppe.ai

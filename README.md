@@ -22,6 +22,9 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik, Parallax-Scrolleffekt
 - `favicon.svg`, `llms.txt` — Favicon bzw. Kurzbeschreibung der Seite für LLM-Crawler
 - `ROADMAP.md` — offene Punkte und nächste Schritte
+- `robots.txt`, `sitemap.xml` — Crawler-Regeln und Sitemap aller Seiten (bei neuen Seiten `sitemap.xml` ergänzen)
+- `404.html` — Fehlerseite für nicht gefundene Seiten (GitHub Pages nutzt sie automatisch)
+- `img/og-image.jpg` — Vorschaubild (1200 × 630) für geteilte Links in Social Media und Messengern
 - `CNAME` — Custom-Domain-Konfiguration für GitHub Pages (`nilswiesmann.net`)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 - `.gitignore` — schließt lokale Claude-Code-Einstellungen (`.claude/`) und das Root-Foto-Duplikat (`Nils.jpg`) vom Repo aus
@@ -44,6 +47,9 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 2. **Kopf anpassen:** In der neuen Datei ändern:
    - `<title>` — Artikeltitel + „| Nils Wiesmann"
    - `<meta name="description" ...>` — 1–2 Sätze Kurzbeschreibung
+   - `<link rel="canonical">` und `og:url` — neue URL des Artikels
+   - `og:title`, `og:description`, `article:published_time` — wie Titel, Beschreibung und Datum
+   - JSON-LD-Block (`application/ld+json`): `headline`, `description`, `datePublished`, `url`, `mainEntityOfPage` und letzter Eintrag der `BreadcrumbList`
 3. **Artikel-Header anpassen:**
    - `<h1>` — der eigentliche Titel
    - `<p class="post-meta">` — Datum (`datetime="JJJJ-MM-TT"` + lesbares Datum) und Tags in `<span class="blog-tags">Tag1 · Tag2</span>`
@@ -63,7 +69,8 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
    </li>
    ```
 
-6. **Veröffentlichen:** Änderungen speichern, dann in GitHub Desktop committen und auf „Push origin" klicken — nach kurzer Zeit ist der neue Artikel live.
+6. **Sitemap & Blog-Liste:** In `sitemap.xml` einen `<url>`-Eintrag für den Artikel ergänzen und im JSON-LD von `blog.html` den Artikel in `blogPost` eintragen.
+7. **Veröffentlichen:** Änderungen speichern, dann in GitHub Desktop committen und auf „Push origin" klicken — nach kurzer Zeit ist der neue Artikel live.
 
 Hinweis: `blog/*.html`-Dateien liegen eine Ebene tiefer als die Startseite, daher zeigen alle internen Links darin auf `../` (z. B. `../css/style.css`, `../index.html`).
 

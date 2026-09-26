@@ -10,6 +10,8 @@ Stand: 2026-09-26. Diese Datei sammelt die nächsten Schritte für die Website n
 - [x] Projekte-Seite: Billify, VCDS Autoscan Parser, VCDS HV Manager (in Planung)
 - [x] Blogbeitrag „Heute Videodreh für eine TV-Reportage" (26.09.2026, `blog/videodreh-tv-reportage.html`), verlinkt von der Referenzen-Karte
 
+- [x] Technische SEO für alle Seiten: canonical, Open Graph, strukturierte Daten (JSON-LD), `sitemap.xml`, `robots.txt`, `404.html`, Bilder verkleinert (PNG → WebP)
+
 ## 1. Referenzen (`referenzen.html`)
 
 - [ ] Kartentexte der beiden Referenzen prüfen und ggf. eigene Formulierung einsetzen
@@ -31,6 +33,9 @@ Stand: 2026-09-26. Diese Datei sammelt die nächsten Schritte für die Website n
 
 ## 4. Mittelfristig
 
+- [ ] Google Search Console und Bing Webmaster Tools einrichten, `https://nilswiesmann.net/sitemap.xml` einreichen
+- [ ] Eigene Vorschaubilder je Blogbeitrag (statt `img/og-image.jpg` für alle Seiten)
+
 - [ ] Weitere Blog-Artikel (Anleitung siehe `README.md`)
 - [ ] Schulungs-Anfrageformular (`schulungen.html`) auf Formular-Dienst umstellen (z. B. Web3Forms oder Formspree) statt `mailto:`
-- [ ] Neue Seiten jeweils in `llms.txt` und in der README-Struktur nachtragen
+- [ ] Neue Seiten jeweils in `llms.txt`, `sitemap.xml` und in der README-Struktur nachtragen; im `<head>` canonical, Open-Graph-Tags und JSON-LD von einer bestehenden Seite übernehmen
