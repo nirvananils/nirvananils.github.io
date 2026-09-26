@@ -8,11 +8,13 @@ Stand: 2026-09-26. Diese Datei sammelt die nächsten Schritte für die Website n
 - [x] Referenz „Schulung von Prüforganisationen" (ohne Namensnennung aus Datenschutzgründen)
 - [x] Referenz „Experte in einer TV-Reportage" (Ausstrahlung Frühjahr 2027)
 - [x] Projekte-Seite: Billify, VCDS Autoscan Parser, VCDS HV Manager (in Planung)
+- [x] Blogbeitrag „Heute Videodreh für eine TV-Reportage" (26.09.2026, `blog/videodreh-tv-reportage.html`), verlinkt von der Referenzen-Karte
 
 ## 1. Referenzen (`referenzen.html`)
 
 - [ ] Kartentexte der beiden Referenzen prüfen und ggf. eigene Formulierung einsetzen
 - [ ] TV-Reportage: nach Freigabe Sender, Sendungsname und Sendetermin ergänzen
+- [ ] TV-Reportage: Folge-Blogbeitrag mit Details (Sender, Sendetermin) schreiben, sobald freigegeben
 - [ ] TV-Reportage: nach Ausstrahlung (Frühjahr 2027) Text auf Vergangenheit umstellen und Link zur Mediathek ergänzen
 - [ ] Weitere Referenzen ergänzen, sobald vorhanden (Karte `<article class="card">` kopieren)
 - [ ] Optional: Referenzen-Teaser auf der Startseite (`index.html`) oder auf `about.html`
