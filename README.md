@@ -12,6 +12,8 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `schulungen/*.html` — Detailseiten der eigenen Schulungsthemen (Diagnose VCDS/VCP/ODIS, SFD/SFD2/UNECE, Retrofit mit VCDS), je mit eigener Illustration
 - `blog.html` — Blog-Übersicht
 - `blog/*.html` — einzelne Blog-Artikel
+- `projekte.html` — eigene Projekte (Kartenraster)
+- `referenzen.html` — Referenzen (Kartenraster, z. B. Schulungen für Prüforganisationen, TV-Reportage)
 - `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
 - `img/*.svg` — eigene, abstrakte Illustrationen (keine Fotos, außer dem Portraitfoto)
@@ -19,6 +21,7 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `css/style.css` — Styles (inkl. Hero-Layout mit Portrait, Parallax-Klassen, Pfeil-Icons bei externen Links)
 - `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik, Parallax-Scrolleffekt
 - `favicon.svg`, `llms.txt` — Favicon bzw. Kurzbeschreibung der Seite für LLM-Crawler
+- `ROADMAP.md` — offene Punkte und nächste Schritte
 - `CNAME` — Custom-Domain-Konfiguration für GitHub Pages (`nilswiesmann.net`)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 - `.gitignore` — schließt lokale Claude-Code-Einstellungen (`.claude/`) und das Root-Foto-Duplikat (`Nils.jpg`) vom Repo aus
