@@ -4,6 +4,7 @@ Stand: 2026-09-27. Diese Datei sammelt die nächsten Schritte für die Website n
 
 ## Zuletzt erledigt
 
+- [x] Bilder für die Kompetenz-Karten „VCP" und „UNECE R155 / R156" eingebaut (WebP), keine Platzhalter mehr
 - [x] Unterseite `referenzen.html` angelegt und im Hauptmenü aller Seiten (nach „Projekte") verlinkt, Eintrag in `llms.txt`
 - [x] Referenz „Schulung von Prüforganisationen" (ohne Namensnennung aus Datenschutzgründen)
 - [x] Referenz „Experte in einer TV-Reportage" (Ausstrahlung Frühjahr 2027)
@@ -68,9 +69,34 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [ ] VCDS Autoscan Parser: Link zu Repo/Demo ergänzen, sobald veröffentlicht
 - [ ] VCDS HV Manager: Karte aktualisieren, sobald die Umsetzung beginnt
 
-## 5. Startseite (`index.html`)
+## 5. Fehlende Bilder und Platzhalter
 
-- [ ] Eigene Bilder für die Kompetenz-Karten „VCP" und „UNECE R155 / R156" erstellen (aktuell `img/placeholder.svg`)
+Stand 2026-09-27. Echte Platzhalter (`img/placeholder.svg`) gibt es keine mehr. Die folgenden Stellen zeigen aber nur abstrakte SVG-Illustrationen oder gar kein eigenes Bild.
+
+- [x] Kompetenz-Karten „VCP" und „UNECE R155 / R156" (`kompetenzen.html`): `img/VCP.webp` und `img/UNECE.webp` eingebaut
+- [ ] UNECE-Bild prüfen: Auf dem Fahrzeug steht „LUCID" (Fremdmarke); ggf. durch ein Bild ohne Markenschriftzug ersetzen
+- [ ] Blog: Eigenes Beitragsbild je Artikel (auf `blog.html` und im Artikel selbst gibt es aktuell keine Bilder)
+  - [ ] `blog/sfd-in-vcds-verfuegbar.html`
+  - [ ] `blog/sfd-und-sfd2-erklaert.html`
+  - [ ] `blog/unece-r155-r156-werkstatt.html`
+  - [ ] `blog/vcds-update-26-9-sfd.html`
+  - [ ] `blog/vcds-vcp-odis-im-vergleich.html`
+  - [ ] `blog/videodreh-tv-reportage.html`
+- [ ] Blog: Eigenes Vorschaubild (`og:image`, 1200 × 630) je Beitrag statt `img/og-image.jpg` für alle Seiten
+- [ ] Projekte (`projekte.html`): echte Screenshots statt Illustration
+  - [ ] Billify (`img/projekte/billify.svg`)
+  - [ ] VCDS Autoscan Parser (`img/projekte/autoscan-parser.svg`)
+  - [ ] VCDS HV Manager (`img/projekte/hv-manager.svg`)
+- [ ] Referenzen (`referenzen.html`): echte Fotos statt Illustration (nur mit Freigabe)
+  - [ ] Schulung von Prüforganisationen (`img/referenzen/schulung-pruefinstitution.svg`)
+  - [ ] TV-Reportage (`img/referenzen/tv-reportage.svg`)
+  - [ ] Experte für den Zoll (`img/referenzen/zoll-plagiate.svg`)
+  - [ ] Werbeclip zur Einführung des HEX-NET (`img/referenzen/werbeclip-hexnet.svg`)
+- [ ] Schulungs-Unterseiten (`schulungen/`): echte Fotos statt Illustration
+  - [ ] VCDS, VCP & ODIS im Praxiseinsatz (`img/schulung-diagnose.svg`)
+  - [ ] Retrofit-Schulung mit VCDS (`img/schulung-retrofit.svg`)
+  - [ ] SFD, SFD2 & UNECE-Konformität (`img/schulung-sfd.svg`)
+- [ ] Danach `img/placeholder.svg` löschen, falls nicht mehr benötigt
 
 ## 6. Mittelfristig
 
@@ -82,7 +108,7 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [ ] Barrierefreiheit weiter verbessern (Kontraste, Tastaturbedienung prüfen); gesetzlich nicht verpflichtend, da Kleinstunternehmen vom BFSG ausgenommen
 
 - [ ] Google Search Console und Bing Webmaster Tools einrichten, `https://nilswiesmann.net/sitemap.xml` einreichen
-- [ ] Eigene Vorschaubilder je Blogbeitrag (statt `img/og-image.jpg` für alle Seiten)
+- [ ] Eigene Vorschaubilder je Blogbeitrag: siehe Abschnitt 5
 
 - [ ] Weitere Blog-Artikel (Anleitung siehe `README.md`)
 - [ ] Schulungs-Anfrageformular (`schulungen.html`) auf Formular-Dienst umstellen (z. B. Web3Forms oder Formspree) statt `mailto:`
