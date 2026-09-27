@@ -14,7 +14,7 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `blog.html` — Blog-Übersicht
 - `blog/*.html` — einzelne Blog-Artikel
 - `projekte.html` — eigene Projekte (Kartenraster)
-- `referenzen.html` — Referenzen (Kartenraster, z. B. Schulungen für Prüforganisationen, TV-Reportage)
+- `referenzen.html` — Referenzen (Kartenraster, z. B. Schulungen für Prüforganisationen, TV-Reportage, Zoll-Expertise zu Diagnose-Plagiaten)
 - `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
 - `agb.html` — Allgemeine Geschäftsbedingungen inkl. Widerrufsbelehrung und Muster-Widerrufsformular (im Footer aller Seiten verlinkt)
