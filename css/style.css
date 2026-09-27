@@ -630,7 +630,7 @@ a { color: var(--accent); text-decoration: none; }
 
 /* Legal pages */
 .legal-page {
-  padding: 100px 0 80px;
+  padding: 100px 24px 80px;
   max-width: 760px;
   margin: 0 auto;
 }
@@ -651,7 +651,7 @@ a { color: var(--accent); text-decoration: none; }
   .hero-stats { grid-template-columns: 1fr; gap: 16px; }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1040px) {
   .main-nav {
     position: absolute;
     top: 68px; left: 0; right: 0;

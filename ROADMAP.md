@@ -11,6 +11,8 @@ Stand: 2026-09-27. Diese Datei sammelt die nächsten Schritte für die Website n
 - [x] Blogbeitrag „Heute Videodreh für eine TV-Reportage" (26.09.2026, `blog/videodreh-tv-reportage.html`), verlinkt von der Referenzen-Karte
 
 - [x] Eigene Unterseiten für Kompetenzen, Leistungen, Ablauf und Kontakt; Menü auf allen Seiten umgestellt, Startseite mit Teasern
+- [x] AGB (`agb.html`) mit Widerrufsbelehrung erstellt, Datenschutzerklärung überarbeitet, Impressum auf § 5 DDG aktualisiert
+- [x] Mobile Navigation: Burger-Menü jetzt bis 1040 px Breite (vorher lief das Menü auf Tablets über)
 - [x] Technische SEO für alle Seiten: canonical, Open Graph, strukturierte Daten (JSON-LD), `sitemap.xml`, `robots.txt`, `404.html`, Bilder verkleinert (PNG → WebP)
 
 ## 1. Inhalte von Nils (Bilder & Infos)
@@ -32,6 +34,12 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [x] Menü auf allen Seiten auf die neuen Unterseiten umstellen; Startseite behält kurze Teaser mit Link auf die Unterseiten
 - [x] Neue Unterseiten in `sitemap.xml`, `llms.txt` und README eintragen; `<head>` (canonical, Open Graph, JSON-LD) von bestehender Unterseite übernehmen
 - [ ] Hero-Einleitungstexte der vier neuen Unterseiten prüfen und ggf. eigene Formulierung einsetzen
+
+## 2a. Rechtstexte
+
+- [ ] AGB, Widerrufsbelehrung und Datenschutzerklärung rechtlich prüfen lassen (z. B. IHK, Anwalt oder Rechtstexte-Dienst)
+- [ ] AGB § 7: Absagefrist 48 Stunden für Diagnose-/Codiertermine bestätigen oder anpassen
+- [ ] Prüfen, ob die c/o-Anschrift als ladungsfähige Anschrift im Impressum ausreicht
 
 ## 3. Referenzen (`referenzen.html`)
 

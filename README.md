@@ -17,6 +17,7 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `referenzen.html` — Referenzen (Kartenraster, z. B. Schulungen für Prüforganisationen, TV-Reportage)
 - `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
+- `agb.html` — Allgemeine Geschäftsbedingungen inkl. Widerrufsbelehrung und Muster-Widerrufsformular (im Footer aller Seiten verlinkt)
 - `img/*.svg` — eigene, abstrakte Illustrationen (keine Fotos, außer dem Portraitfoto)
 - `img/nils.jpg` — Portraitfoto (Original liegt zusätzlich als `Nils.jpg` im Projektordner, aber `.gitignore`t)
 - `css/style.css` — Styles (inkl. Hero-Layout mit Portrait, Parallax-Klassen, Pfeil-Icons bei externen Links)

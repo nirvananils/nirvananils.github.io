@@ -30,6 +30,7 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 - [Referenzen](https://nilswiesmann.net/referenzen.html): Ausgewählte Referenzen (Schulung von Prüforganisationen, TV-Experte)
 - [Impressum](https://nilswiesmann.net/impressum.html): Rechtliche Anbieterkennzeichnung
 - [Datenschutz](https://nilswiesmann.net/datenschutz.html): Datenschutzerklärung
+- [AGB](https://nilswiesmann.net/agb.html): Allgemeine Geschäftsbedingungen mit Widerrufsbelehrung
 
 - [Sitemap](https://nilswiesmann.net/sitemap.xml): Liste aller Seiten
 
