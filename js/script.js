@@ -169,3 +169,63 @@ if (bookingForm) {
       `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
+
+/* Lightbox: Links mit class="gallery-link" öffnen das Bild groß.
+   Alle Galerie-Links innerhalb derselben .card bilden eine Galerie
+   (Vor/Zurück per Button oder Pfeiltasten, ESC schließt). */
+document.querySelectorAll(".card").forEach((card) => {
+  const links = Array.from(card.querySelectorAll("a.gallery-link"));
+  links.forEach((link, index) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      openLightbox(links, index);
+    });
+  });
+});
+
+function openLightbox(links, startIndex) {
+  let index = startIndex;
+  const overlay = document.createElement("div");
+  overlay.className = "lightbox";
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-modal", "true");
+  overlay.innerHTML = `
+    <button class="lightbox-close" aria-label="Schließen">&times;</button>
+    ${links.length > 1 ? '<button class="lightbox-prev" aria-label="Vorheriges Bild">&lsaquo;</button><button class="lightbox-next" aria-label="Nächstes Bild">&rsaquo;</button>' : ""}
+    <img alt="">
+    <p class="lightbox-caption"></p>
+  `;
+  const img = overlay.querySelector("img");
+  const caption = overlay.querySelector(".lightbox-caption");
+
+  const show = () => {
+    const link = links[index];
+    const thumb = link.querySelector("img");
+    img.src = link.getAttribute("href");
+    img.alt = thumb ? thumb.alt : "";
+    caption.textContent = link.dataset.caption || (thumb ? thumb.alt : "");
+  };
+  const step = (delta) => {
+    index = (index + delta + links.length) % links.length;
+    show();
+  };
+  const close = () => {
+    overlay.remove();
+    document.removeEventListener("keydown", onKey);
+  };
+  const onKey = (e) => {
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft" && links.length > 1) step(-1);
+    if (e.key === "ArrowRight" && links.length > 1) step(1);
+  };
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target.closest(".lightbox-prev")) return step(-1);
+    if (e.target.closest(".lightbox-next")) return step(1);
+    if (e.target === overlay || e.target.closest(".lightbox-close")) close();
+  });
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(overlay);
+  show();
+  overlay.querySelector(".lightbox-close").focus();
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="t">
+  <title id="t">Abstrakte Illustration: Liste von Scan-Einträgen und Balkendiagramm</title>
+  <rect width="480" height="300" fill="#0f151d"/>
+  <g stroke="#223041" stroke-width="1">
+    <path d="M0 60 H480 M0 120 H480 M0 180 H480 M0 240 H480 M80 0 V300 M160 0 V300 M240 0 V300 M320 0 V300 M400 0 V300"/>
+  </g>
+  <g fill="none" stroke="#ff5566" stroke-width="2.5" stroke-linecap="round">
+    <rect x="70" y="70" width="150" height="160" rx="10"/>
+    <path d="M90 100 h110 M90 130 h110 M90 160 h80 M90 190 h95"/>
+    <path d="M230 150 h40" stroke-dasharray="4 6"/>
+    <path d="M290 230 V240 H420"/>
+  </g>
+  <g fill="#ff5566" opacity="0.85">
+    <rect x="300" y="170" width="22" height="60" rx="3"/>
+    <rect x="335" y="120" width="22" height="110" rx="3"/>
+    <rect x="370" y="145" width="22" height="85" rx="3"/>
+  </g>
+  <g fill="#ffb454"><circle cx="270" cy="150" r="4"/><rect x="405" y="95" width="22" height="135" rx="3" opacity="0.85"/></g>
+</svg>

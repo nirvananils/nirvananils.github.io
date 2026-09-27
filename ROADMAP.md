@@ -15,6 +15,8 @@ Stand: 2026-09-27. Diese Datei sammelt die nächsten Schritte für die Website n
 - [x] Mobile Navigation: Burger-Menü jetzt bis 1040 px Breite (vorher lief das Menü auf Tablets über)
 - [x] Spitzenstellungs-Werbung („einer der führenden …“) entfernt, „zertifizierte Zugangswege“ durch „offizielle Zugangswege“ ersetzt
 - [x] Impressum, Datenschutz und AGB mit Menü und Footer wie alle anderen Seiten
+- [x] Projekte und Referenzen ausgebaut: Details je Karte, Status, Technologien, Titel-Illustrationen, Bildergalerie mit Lightbox; Referenzen um „Mitwirkung und laufende Tätigkeiten“ ergänzt
+- [x] Kompetenzen, Leistungen, Ablauf und Kontakt um Vertiefungslinks, Zielgruppen, Vorbereitungs-Checkliste und weitere Kontaktwege ergänzt
 - [x] Technische SEO für alle Seiten: canonical, Open Graph, strukturierte Daten (JSON-LD), `sitemap.xml`, `robots.txt`, `404.html`, Bilder verkleinert (PNG → WebP)
 
 ## 1. Inhalte von Nils (Bilder & Infos)
@@ -35,6 +37,7 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [x] Kontakt: eigene Unterseite (z. B. `kontakt.html`, aktuell `index.html#kontakt`)
 - [x] Menü auf allen Seiten auf die neuen Unterseiten umstellen; Startseite behält kurze Teaser mit Link auf die Unterseiten
 - [x] Neue Unterseiten in `sitemap.xml`, `llms.txt` und README eintragen; `<head>` (canonical, Open Graph, JSON-LD) von bestehender Unterseite übernehmen
+- [ ] Neue Texte prüfen: Zielgruppen-Karten (`leistungen.html`), Vorbereitungs-Checkliste (`ablauf.html`), Einleitungen auf `projekte.html` und `referenzen.html`
 - [ ] Hero-Einleitungstexte der vier neuen Unterseiten prüfen und ggf. eigene Formulierung einsetzen
 
 ## 0. Sofort (Nils, in GitHub)
@@ -53,12 +56,15 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [ ] TV-Reportage: nach Freigabe Sender, Sendungsname und Sendetermin ergänzen
 - [ ] TV-Reportage: Folge-Blogbeitrag mit Details (Sender, Sendetermin) schreiben, sobald freigegeben
 - [ ] TV-Reportage: nach Ausstrahlung (Frühjahr 2027) Text auf Vergangenheit umstellen und Link zur Mediathek ergänzen
+- [ ] Fotos zu den Referenzen ergänzen (nur mit Freigabe), Anleitung in `README.md`
+- [ ] Kundenstimmen: vorbereiteten, auskommentierten Abschnitt in `referenzen.html` aktivieren, sobald Zitate vorliegen
 - [ ] Weitere Referenzen ergänzen, sobald vorhanden (Karte `<article class="card">` kopieren)
 - [ ] Optional: Referenzen-Teaser auf der Startseite (`index.html`) oder auf `about.html`
 
 ## 4. Projekte (`projekte.html`)
 
-- [ ] Platzhalter-Intro („Platzhalter — hier entstehen …") durch echten Einleitungstext ersetzen und `TODO (Nils)`-Kommentar entfernen
+- [x] Platzhalter-Intro durch echten Einleitungstext ersetzt
+- [ ] Screenshots je Projekt ergänzen (Anleitung in `README.md`, Abschnitt „Bilder für Projekte und Referenzen“)
 - [ ] VCDS Autoscan Parser: Link zu Repo/Demo ergänzen, sobald veröffentlicht
 - [ ] VCDS HV Manager: Karte aktualisieren, sobald die Umsetzung beginnt
 

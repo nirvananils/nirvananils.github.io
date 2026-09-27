@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="t">
+  <title id="t">Abstrakte Illustration: Schulung mit Präsentationstafel und Teilnehmenden</title>
+  <rect width="480" height="300" fill="#0f151d"/>
+  <g stroke="#223041" stroke-width="1">
+    <path d="M0 60 H480 M0 120 H480 M0 180 H480 M0 240 H480 M80 0 V300 M160 0 V300 M240 0 V300 M320 0 V300 M400 0 V300"/>
+  </g>
+  <g fill="none" stroke="#ff5566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="150" y="50" width="180" height="110" rx="8"/>
+    <path d="M240 160 v20 M210 190 l30 -10 l30 10"/>
+    <path d="M175 130 l35 -35 l30 25 l45 -45"/>
+    <circle cx="140" cy="220" r="14"/><path d="M115 262 q25 -30 50 0"/>
+    <circle cx="240" cy="225" r="14"/><path d="M215 267 q25 -30 50 0"/>
+    <circle cx="340" cy="220" r="14"/><path d="M315 262 q25 -30 50 0"/>
+  </g>
+  <g fill="#ffb454"><circle cx="285" cy="75" r="5"/></g>
+</svg>

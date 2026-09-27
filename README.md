@@ -36,6 +36,16 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - Hero-Bereich (Startseite + alle Unterseiten) hat einen dezenten **Parallax-Scrolleffekt**: Elemente mit `data-parallax="<Faktor>"` verschieben sich beim Scrollen anteilig zur Scroll-Position (siehe `js/script.js`). Wird bei aktivierter Systemeinstellung „Bewegung reduzieren" automatisch deaktiviert.
 - Externe Links (`target="_blank"`) tragen die Klasse `arrow-link` und bekommen automatisch ein „↗"-Symbol angehängt.
 
+## Bilder für Projekte und Referenzen
+
+Projekt- und Referenzkarten (`projekte.html`, `referenzen.html`) zeigen aktuell abstrakte SVG-Illustrationen aus `img/projekte/` bzw. `img/referenzen/`. Echte Fotos oder Screenshots ergänzen:
+
+1. Bilder als WebP (ca. 1200 px breit) z. B. nach `img/projekte/billify/` legen.
+2. Titelbild: den `<div class="card-image-wrap">` der Karte durch `<a class="card-image-wrap gallery-link" href="…" data-caption="…"><img class="card-image" …></a>` ersetzen.
+3. Weitere Bilder als Vorschaubilder in `<div class="card-thumbs">` direkt darunter, jeweils als `<a class="gallery-link" href="…"><img …></a>`.
+
+Alle Galerie-Links einer Karte öffnen sich gemeinsam in einer Lightbox (Vor/Zurück, Pfeiltasten, ESC; siehe `js/script.js`). Ein fertiges Beispiel steht als HTML-Kommentar oben in beiden Seiten. Bei Referenzen nur Fotos mit Freigabe der Abgebildeten bzw. Auftraggeber verwenden.
+
 ## Rechtliche Hinweise
 
 - Es wird von der Kleinunternehmerregelung (§ 19 Abs. 1 UStG) Gebrauch gemacht, daher wird keine USt-ID ausgewiesen.

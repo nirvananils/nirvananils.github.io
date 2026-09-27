@@ -6,7 +6,7 @@
 <title>Referenzen – Nils Wiesmann | Fahrzeugdiagnose VW-Konzern</title>
 <meta name="description" content="Ausgewählte Referenzen von Nils Wiesmann: Schulungen für Prüforganisationen und Experte in einer TV-Reportage.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 <link rel="canonical" href="https://nilswiesmann.net/referenzen.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Nils Wiesmann">
@@ -108,24 +108,126 @@
     </div>
   </section>
 
+  <!--
+    Referenzkarten: Jede <article class="card card-detail"> ist eine Referenz.
+    Bilder ergänzen (nur mit Freigabe der abgebildeten Personen/Auftraggeber):
+      1. Fotos z. B. als WebP nach img/referenzen/<referenz>/ legen (Breite ca. 1200 px).
+      2. Titelbild: den <div class="card-image-wrap"> durch einen Galerie-Link ersetzen:
+           <a class="card-image-wrap gallery-link" href="img/referenzen/tv/1.webp" data-caption="Beim Dreh">
+             <img class="card-image" src="img/referenzen/tv/1.webp" alt="Beim Dreh der TV-Reportage" width="400" height="250" loading="lazy">
+           </a>
+      3. Weitere Bilder als Vorschaubilder direkt darunter:
+           <div class="card-thumbs">
+             <a class="gallery-link" href="img/referenzen/tv/2.webp" data-caption="Am Fahrzeug"><img src="img/referenzen/tv/2.webp" alt="Diagnose am Fahrzeug während des Drehs" loading="lazy"></a>
+           </div>
+      Alle Galerie-Links einer Karte öffnen sich zusammen in der Lightbox (js/script.js).
+  -->
   <section id="referenzen" class="section">
     <div class="container">
       <span class="tag">01 — Übersicht</span>
       <h2>Referenzen im Überblick</h2>
+      <p class="section-intro">Ausgewählte Aufträge, bei denen ich als Trainer oder Experte für Fahrzeugdiagnose im Volkswagen-Konzern gefragt war.</p>
 
       <div class="card-grid">
-        <article class="card">
-          <div class="card-icon">PO</div>
+        <article class="card card-detail">
+          <div class="card-image-wrap"><img class="card-image" src="img/referenzen/schulung-pruefinstitution.svg" alt="Illustration: Schulung mit Präsentationstafel" width="400" height="250" loading="lazy"></div>
+          <span class="card-status">Schulung</span>
           <h3>Schulung von Prüforganisationen</h3>
-          <p>Schulungen für Prüforganisationen rund um Fahrzeugdiagnose im Volkswagen-Konzern. Aus Datenschutzgründen werden keine Namen genannt.</p>
+          <p>Schulungen für Prüforganisationen rund um Fahrzeugdiagnose im Volkswagen-Konzern.</p>
+          <ul class="check-list">
+            <li>Zielgruppe: Prüforganisationen</li>
+            <li>Thema: Fahrzeugdiagnose im Volkswagen-Konzern</li>
+            <li>Aus Datenschutzgründen ohne Namensnennung</li>
+          </ul>
+          <a href="schulungen.html" class="btn btn-ghost">Schulungsangebot ansehen</a>
         </article>
 
-        <article class="card">
-          <div class="card-icon">TV</div>
+        <article class="card card-detail">
+          <div class="card-image-wrap"><img class="card-image" src="img/referenzen/tv-reportage.svg" alt="Illustration: Fernsehkamera" width="400" height="250" loading="lazy"></div>
+          <span class="card-status">Medien</span>
           <h3>Experte in einer TV-Reportage</h3>
-          <p>Mitwirkung als Experte in einer Reportage im Fernsehen. Die Ausstrahlung ist für Frühjahr 2027 geplant.</p>
+          <p>Mitwirkung als Experte in einer Reportage im Fernsehen.</p>
+          <ul class="check-list">
+            <li>Dreh am 26.09.2026</li>
+            <li>Ausstrahlung geplant für Frühjahr 2027</li>
+            <li>Sender und Sendetermin folgen nach Freigabe</li>
+          </ul>
           <a href="blog/videodreh-tv-reportage.html" class="btn btn-ghost">Zum Blogbeitrag</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <span class="tag">02 — Tätigkeiten</span>
+      <h2>Mitwirkung und laufende Tätigkeiten</h2>
+      <p class="section-intro">Neben einzelnen Aufträgen bringe ich mein Wissen dauerhaft in Support- und Schulungsstrukturen rund um VCDS ein.</p>
+
+      <div class="card-grid">
+        <article class="card card-detail">
+          <div class="card-icon">AI</div>
+          <span class="card-status">seit 2020</span>
+          <h3>Aufbau des Schulungsprogramms</h3>
+          <p>Konzeption und Aufbau des neuen Schulungsprogramms von Auto-Intern bzw. vcds.de — inklusive dedizierter SFD-Schulungen.</p>
+          <a href="https://www.vcds.de/" target="_blank" rel="noopener" class="btn btn-ghost arrow-link">vcds.de ansehen</a>
+        </article>
+
+        <article class="card card-detail">
+          <div class="card-icon">WI</div>
+          <span class="card-status">seit 2020</span>
+          <h3>Support-Aufbau bei Auto-Intern</h3>
+          <p>Aufbau und Modernisierung des Supports bei Auto-Intern, dem offiziellen Ross-Tech-Distributor für Deutschland — inklusive wiki.vcds.de und forum.vcds.de.</p>
+          <a href="https://www.auto-intern.de/" target="_blank" rel="noopener" class="btn btn-ghost arrow-link">auto-intern.de ansehen</a>
+        </article>
+
+        <article class="card card-detail">
+          <div class="card-icon">SFD</div>
+          <span class="card-status">laufend</span>
+          <h3>SFD-Support für VCDS</h3>
+          <p>Ansprechpartner für die SFD-Freischaltung in Verbindung mit VCDS auf sfd.vcds.de.</p>
+          <a href="https://sfd.vcds.de/" target="_blank" rel="noopener" class="btn btn-ghost arrow-link">sfd.vcds.de ansehen</a>
+        </article>
+
+        <article class="card card-detail">
+          <div class="card-icon">LH</div>
+          <span class="card-status">seit 2016</span>
+          <h3>LH.next (ehemals LHCoding)</h3>
+          <p>Eigenes Kleingewerbe für Fahrzeug-Codierungen und Diagnosedienstleistungen für Fahrzeuge des Volkswagen-Konzerns.</p>
+          <a href="https://www.lhnext.de/" target="_blank" rel="noopener" class="btn btn-ghost arrow-link">lhnext.de ansehen</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    Kundenstimmen: Sobald Zitate mit Zustimmung vorliegen, diesen Abschnitt einkommentieren.
+  <section class="section">
+    <div class="container">
+      <span class="tag">03 — Kundenstimmen</span>
+      <h2>Was Kunden sagen</h2>
+      <div class="card-grid">
+        <article class="card">
+          <p>„Zitat …“</p>
+          <p class="card-status">Name, Werkstatt</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="col-label">
+        <span class="tag">03 — Zusammenarbeit</span>
+      </div>
+      <div class="col-content">
+        <h2>Ihr Projekt als nächste Referenz?</h2>
+        <p>Ob Schulung für Ihr Team, Unterstützung bei einer schwierigen Diagnose oder fachliche Einschätzung für ein Medienprojekt — schildern Sie kurz Ihr Anliegen.</p>
+        <div class="section-more">
+          <a href="kontakt.html" class="btn btn-primary">Anfrage stellen</a>
+          <a href="leistungen.html" class="btn btn-ghost">Leistungen ansehen</a>
+        </div>
       </div>
     </div>
   </section>
