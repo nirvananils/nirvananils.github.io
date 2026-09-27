@@ -6,7 +6,7 @@
 <title>Datenschutz | Nils Wiesmann</title>
 <meta name="description" content="Datenschutzerklärung von nilswiesmann.net: welche Daten beim Besuch der Website verarbeitet werden und welche Rechte Sie haben.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 <link rel="canonical" href="https://nilswiesmann.net/datenschutz.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Nils Wiesmann">
@@ -23,7 +23,28 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<div class="container legal-page">
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">NW<span>.</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="about.html">Über mich</a>
+      <a href="kompetenzen.html">Kompetenzen</a>
+      <a href="schulungen.html">Schulungen</a>
+      <a href="blog.html">Blog</a>
+      <a href="projekte.html">Projekte</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ablauf.html">Ablauf</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="container legal-page">
   <a href="index.html" class="back-link">&larr; Zurück zur Startseite</a>
   <h1>Datenschutzerklärung</h1>
 
@@ -84,7 +105,19 @@
   <p>
     Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren (Art. 77 DSGVO). Zuständig für uns ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2–4, 40213 Düsseldorf.
   </p>
-</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <span>© <span id="year"></span> Nils Wiesmann</span>
+    <nav class="footer-nav">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+    </nav>
+  </div>
+</footer>
+
 <script src="js/script.js"></script>
 </body>
 </html>

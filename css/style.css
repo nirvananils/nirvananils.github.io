@@ -630,7 +630,7 @@ a { color: var(--accent); text-decoration: none; }
 
 /* Legal pages */
 .legal-page {
-  padding: 100px 24px 80px;
+  padding: 64px 24px 80px;
   max-width: 760px;
   margin: 0 auto;
 }

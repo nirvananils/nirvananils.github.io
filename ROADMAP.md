@@ -13,6 +13,8 @@ Stand: 2026-09-27. Diese Datei sammelt die nächsten Schritte für die Website n
 - [x] Eigene Unterseiten für Kompetenzen, Leistungen, Ablauf und Kontakt; Menü auf allen Seiten umgestellt, Startseite mit Teasern
 - [x] AGB (`agb.html`) mit Widerrufsbelehrung erstellt, Datenschutzerklärung überarbeitet, Impressum auf § 5 DDG aktualisiert
 - [x] Mobile Navigation: Burger-Menü jetzt bis 1040 px Breite (vorher lief das Menü auf Tablets über)
+- [x] Spitzenstellungs-Werbung („einer der führenden …“) entfernt, „zertifizierte Zugangswege“ durch „offizielle Zugangswege“ ersetzt
+- [x] Impressum, Datenschutz und AGB mit Menü und Footer wie alle anderen Seiten
 - [x] Technische SEO für alle Seiten: canonical, Open Graph, strukturierte Daten (JSON-LD), `sitemap.xml`, `robots.txt`, `404.html`, Bilder verkleinert (PNG → WebP)
 
 ## 1. Inhalte von Nils (Bilder & Infos)
@@ -34,6 +36,10 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [x] Menü auf allen Seiten auf die neuen Unterseiten umstellen; Startseite behält kurze Teaser mit Link auf die Unterseiten
 - [x] Neue Unterseiten in `sitemap.xml`, `llms.txt` und README eintragen; `<head>` (canonical, Open Graph, JSON-LD) von bestehender Unterseite übernehmen
 - [ ] Hero-Einleitungstexte der vier neuen Unterseiten prüfen und ggf. eigene Formulierung einsetzen
+
+## 0. Sofort (Nils, in GitHub)
+
+- [ ] HTTPS erzwingen: Repo `nirvananils.github.io` → Settings → Pages → Haken bei „Enforce HTTPS“ (aktuell liefert `http://nilswiesmann.net` die Seite unverschlüsselt aus)
 
 ## 2a. Rechtstexte
 
@@ -61,6 +67,13 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 - [ ] Eigene Bilder für die Kompetenz-Karten „VCP" und „UNECE R155 / R156" erstellen (aktuell `img/placeholder.svg`)
 
 ## 6. Mittelfristig
+
+- [ ] Google-Unternehmensprofil (Google Business Profile) anlegen; Name, Anschrift und Kontaktdaten identisch zum Impressum
+- [ ] Einsatzgebiet nennen (Region vor Ort, was remote möglich ist), z. B. auf `leistungen.html` und `kontakt.html`
+- [ ] Eigene E-Mail-Adresse auf der eigenen Domain (z. B. `kontakt@nilswiesmann.net`) statt `gruppe.ai` + Gmail; danach Kontaktseiten, Impressum, Datenschutz und AGB anpassen
+- [ ] Kundenstimmen (mit Zustimmung) auf `referenzen.html` ergänzen
+- [ ] FAQ-Seite (z. B. Kosten einer Codierung, Garantie, Remote-Möglichkeit), mit `FAQPage`-JSON-LD
+- [ ] Barrierefreiheit weiter verbessern (Kontraste, Tastaturbedienung prüfen); gesetzlich nicht verpflichtend, da Kleinstunternehmen vom BFSG ausgenommen
 
 - [ ] Google Search Console und Bing Webmaster Tools einrichten, `https://nilswiesmann.net/sitemap.xml` einreichen
 - [ ] Eigene Vorschaubilder je Blogbeitrag (statt `img/og-image.jpg` für alle Seiten)
