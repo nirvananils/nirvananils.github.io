@@ -16,8 +16,12 @@ Diese Website richtet sich an Werkstätten, Sachverständige und Fahrzeugbetreib
 
 ## Seiten
 
-- [Startseite](https://nilswiesmann.net/index.html): Übersicht über Person, Kompetenzen, Leistungen, Ablauf und Kontakt
+- [Startseite](https://nilswiesmann.net/index.html): Übersicht mit Teasern zu Person, Kompetenzen, Leistungen, Ablauf und Kontakt
 - [Über mich](https://nilswiesmann.net/about.html): Profil, beruflicher Werdegang und Arbeitsweise
+- [Kompetenzen](https://nilswiesmann.net/kompetenzen.html): Fachgebiete VCDS, VCP, ODIS, SFD/SFD2, UNECE R155/R156, Datensätze und Steuergeräte
+- [Leistungen](https://nilswiesmann.net/leistungen.html): Diagnose, Codierung, SFD-/SFD2-Freischaltungen, Regulatorik-Beratung, Schulung
+- [Ablauf](https://nilswiesmann.net/ablauf.html): Ablauf einer Zusammenarbeit in vier Schritten
+- [Kontakt](https://nilswiesmann.net/kontakt.html): Kontaktmöglichkeiten per E-Mail und Telefon
 - [Schulungen](https://nilswiesmann.net/schulungen.html): Schulungsübersicht (Auto-Intern-Programm + eigenes Angebot)
 - [Diagnose-Schulung](https://nilswiesmann.net/schulungen/diagnose-vcds-vcp-odis.html): VCDS, VCP &amp; ODIS im Detail
 - [SFD/SFD2/UNECE-Schulung](https://nilswiesmann.net/schulungen/sfd-sfd2-unece.html): Freischaltung und Konformität im Detail

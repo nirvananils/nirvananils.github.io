@@ -1,6 +1,6 @@
 # Roadmap — nächste Schritte
 
-Stand: 2026-09-26. Diese Datei sammelt die nächsten Schritte für die Website nilswiesmann.net.
+Stand: 2026-09-27. Diese Datei sammelt die nächsten Schritte für die Website nilswiesmann.net.
 
 ## Zuletzt erledigt
 
@@ -10,6 +10,7 @@ Stand: 2026-09-26. Diese Datei sammelt die nächsten Schritte für die Website n
 - [x] Projekte-Seite: Billify, VCDS Autoscan Parser, VCDS HV Manager (in Planung)
 - [x] Blogbeitrag „Heute Videodreh für eine TV-Reportage" (26.09.2026, `blog/videodreh-tv-reportage.html`), verlinkt von der Referenzen-Karte
 
+- [x] Eigene Unterseiten für Kompetenzen, Leistungen, Ablauf und Kontakt; Menü auf allen Seiten umgestellt, Startseite mit Teasern
 - [x] Technische SEO für alle Seiten: canonical, Open Graph, strukturierte Daten (JSON-LD), `sitemap.xml`, `robots.txt`, `404.html`, Bilder verkleinert (PNG → WebP)
 
 ## 1. Inhalte von Nils (Bilder & Infos)
@@ -24,12 +25,13 @@ Stand: 2026-09-26. Diese Datei sammelt die nächsten Schritte für die Website n
 Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt auf einen Abschnitt der Startseite.
 
 - [x] Über mich (`about.html`), Schulungen (`schulungen.html`), Blog (`blog.html`), Projekte (`projekte.html`), Referenzen (`referenzen.html`)
-- [ ] Kompetenzen: eigene Unterseite (z. B. `kompetenzen.html`, aktuell `index.html#kompetenzen`)
-- [ ] Leistungen: eigene Unterseite (z. B. `leistungen.html`, aktuell `index.html#leistungen`)
-- [ ] Ablauf: eigene Unterseite (z. B. `ablauf.html`, aktuell `index.html#ablauf`)
-- [ ] Kontakt: eigene Unterseite (z. B. `kontakt.html`, aktuell `index.html#kontakt`)
-- [ ] Menü auf allen Seiten auf die neuen Unterseiten umstellen; Startseite behält kurze Teaser mit Link auf die Unterseiten
-- [ ] Neue Unterseiten in `sitemap.xml`, `llms.txt` und README eintragen; `<head>` (canonical, Open Graph, JSON-LD) von bestehender Unterseite übernehmen
+- [x] Kompetenzen: eigene Unterseite (z. B. `kompetenzen.html`, aktuell `index.html#kompetenzen`)
+- [x] Leistungen: eigene Unterseite (z. B. `leistungen.html`, aktuell `index.html#leistungen`)
+- [x] Ablauf: eigene Unterseite (z. B. `ablauf.html`, aktuell `index.html#ablauf`)
+- [x] Kontakt: eigene Unterseite (z. B. `kontakt.html`, aktuell `index.html#kontakt`)
+- [x] Menü auf allen Seiten auf die neuen Unterseiten umstellen; Startseite behält kurze Teaser mit Link auf die Unterseiten
+- [x] Neue Unterseiten in `sitemap.xml`, `llms.txt` und README eintragen; `<head>` (canonical, Open Graph, JSON-LD) von bestehender Unterseite übernehmen
+- [ ] Hero-Einleitungstexte der vier neuen Unterseiten prüfen und ggf. eigene Formulierung einsetzen
 
 ## 3. Referenzen (`referenzen.html`)
 

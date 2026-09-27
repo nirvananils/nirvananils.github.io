@@ -7,6 +7,7 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 ## Struktur
 
 - `index.html` — Startseite (Hero mit Portraitfoto und Parallax-Effekt, Über mich, Kompetenzen, Werdegang-Teaser, Schulungen-Teaser, Portfolio, Leistungen, Ablauf, Kontakt)
+- `kompetenzen.html`, `leistungen.html`, `ablauf.html`, `kontakt.html` — eigene Unterseiten je Menüpunkt (die Startseite zeigt dazu nur kurze Teaser mit Link)
 - `about.html` — Über mich, beruflicher Werdegang, Partner-Übersicht (Kartenraster mit LH.next (ehemals LHCoding), vcds.de, sfd.vcds.de, auto-intern.de)
 - `schulungen.html` — Schulungsübersicht: verlinktes offizielles Auto-Intern-Schulungsprogramm + eigenes individuelles Angebot, Anfrage-/Buchungsformular (mailto-basiert, kein Server nötig)
 - `schulungen/*.html` — Detailseiten der eigenen Schulungsthemen (Diagnose VCDS/VCP/ODIS, SFD/SFD2/UNECE, Retrofit mit VCDS), je mit eigener Illustration
