@@ -74,7 +74,7 @@ Ziel: Jeder Menüpunkt in der Kopfzeile führt auf eine eigene Unterseite statt 
 Stand 2026-09-27. Echte Platzhalter (`img/placeholder.svg`) gibt es keine mehr. Die folgenden Stellen zeigen aber nur abstrakte SVG-Illustrationen oder gar kein eigenes Bild.
 
 - [x] Kompetenz-Karten „VCP" und „UNECE R155 / R156" (`kompetenzen.html`): `img/VCP.webp` und `img/UNECE.webp` eingebaut
-- [ ] UNECE-Bild prüfen: Auf dem Fahrzeug steht „LUCID" (Fremdmarke); ggf. durch ein Bild ohne Markenschriftzug ersetzen
+- [x] UNECE-Bild ersetzt: VW-Fahrzeug statt Fremdmarke („LUCID")
 - [ ] Blog: Eigenes Beitragsbild je Artikel (auf `blog.html` und im Artikel selbst gibt es aktuell keine Bilder)
   - [ ] `blog/sfd-in-vcds-verfuegbar.html`
   - [ ] `blog/sfd-und-sfd2-erklaert.html`
