@@ -4,3 +4,6 @@
 # Original-Fotodatei liegt im Projektordner zur Referenz; die Website nutzt
 # die Kopie unter img/nils.jpg
 /Nils.jpg
+
+# Build-Ausgabe von tools/build.mjs
+_site/

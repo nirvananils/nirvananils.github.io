@@ -11,8 +11,10 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `about.html` — Über mich, beruflicher Werdegang, Partner-Übersicht (Kartenraster mit LH.next (ehemals LHCoding), vcds.de, sfd.vcds.de, auto-intern.de)
 - `schulungen.html` — Schulungsübersicht: verlinktes offizielles Auto-Intern-Schulungsprogramm + eigenes individuelles Angebot, Anfrage-/Buchungsformular (mailto-basiert, kein Server nötig)
 - `schulungen/*.html` — Detailseiten der eigenen Schulungsthemen (Diagnose VCDS/VCP/ODIS, SFD/SFD2/UNECE, Retrofit mit VCDS), je mit eigener Illustration
-- `blog.html` — Blog-Übersicht
-- `blog/*.html` — einzelne Blog-Artikel
+- `blog.html` — Blog-Übersicht (Liste und JSON-LD werden beim Build aus `blog/*.html` erzeugt)
+- `blog/*.html` — einzelne Blog-Artikel (auch geplante, siehe unten)
+- `tools/build.mjs` — Build-Skript: erzeugt die veröffentlichte Website in `_site/` (ohne geplante Artikel und Entwürfe)
+- `.github/workflows/deploy.yml` — baut und veröffentlicht die Seite bei jedem Push und täglich um ca. 04:15/05:15 Uhr
 - `projekte.html` — eigene Projekte (Kartenraster)
 - `referenzen.html` — Referenzen (Kartenraster, z. B. Schulungen für Prüforganisationen, TV-Reportage, Zoll-Expertise zu Diagnose-Plagiaten, HEX-NET-Werbeclip auf YouTube)
 - `impressum.html` — Impressum
@@ -21,7 +23,7 @@ Statische Website für Nils Wiesmann, Fahrzeugdiagnose-Spezialist für den Volks
 - `img/*.svg` — eigene, abstrakte Illustrationen (keine Fotos, außer dem Portraitfoto)
 - `img/nils.jpg` — Portraitfoto (Original liegt zusätzlich als `Nils.jpg` im Projektordner, aber `.gitignore`t)
 - `css/style.css` — Styles (inkl. Hero-Layout mit Portrait, Parallax-Klassen, Pfeil-Icons bei externen Links)
-- `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik, Parallax-Scrolleffekt
+- `js/script.js` — Mobile-Navigation, E-Mail-Verschleierung gegen Bots, Buchungsformular-Logik, Parallax-Scrolleffekt, Cookie-Banner und Google Analytics
 - `favicon.svg`, `llms.txt` — Favicon bzw. Kurzbeschreibung der Seite für LLM-Crawler
 - `ROADMAP.md` — offene Punkte und nächste Schritte
 - `robots.txt`, `sitemap.xml` — Crawler-Regeln und Sitemap aller Seiten (bei neuen Seiten `sitemap.xml` ergänzen)
@@ -52,39 +54,42 @@ Alle Galerie-Links einer Karte öffnen sich gemeinsam in einer Lightbox (Vor/Zur
 - Die im Impressum angegebene Anschrift ist eine c/o-Adresse bei Auto-Intern GmbH.
 - E-Mail-Adressen und Telefonnummer liegen nur Base64-kodiert im HTML (`data-reveal-enc`) und werden erst nach einem echten Klick clientseitig entschlüsselt (`js/script.js`). Das schützt nicht vor Bots, die JavaScript ausführen und Klicks simulieren, reduziert aber Spam durch einfache Harvester deutlich, da die Adresse nirgends im statischen HTML im Klartext steht.
 - Es werden keine Google Fonts oder andere externe Drittanbieter-Ressourcen geladen (nur Systemschriften) — dadurch entfällt das in Deutschland bekannte rechtliche Risiko rund um IP-Übermittlung an Google-Server beim Laden von Web-Fonts.
+- Einzige Ausnahme: Google Analytics 4, aber **nur nach Einwilligung** im Cookie-Banner (siehe unten und `datenschutz.html`, Abschnitte 6 und 7).
 
-## Neuen Blog-Artikel hinzufügen
+## Neuen Blog-Artikel hinzufügen (auch geplant)
+
+Die Blog-Übersicht, das JSON-LD in `blog.html` und die Blog-Einträge in `sitemap.xml` werden beim Veröffentlichen automatisch erzeugt. Pro Artikel reicht eine Datei in `blog/`.
 
 1. **Vorlage kopieren:** Eine bestehende Datei aus `blog/` duplizieren, z. B. `blog/sfd-und-sfd2-erklaert.html`, und unter einem neuen, sprechenden Dateinamen speichern (nur Kleinbuchstaben, Bindestriche statt Leerzeichen), z. B. `blog/mein-neuer-artikel.html`.
-2. **Kopf anpassen:** In der neuen Datei ändern:
+2. **Veröffentlichungsdatum setzen:** `<meta property="article:published_time" content="JJJJ-MM-TT">` bestimmt, **ab wann der Artikel live ist**. Liegt das Datum in der Zukunft, bleibt der Artikel bis zu diesem Tag unsichtbar: keine Übersicht, keine Sitemap, direkte URL liefert 404. Am Stichtag geht er morgens automatisch online (täglicher Lauf in GitHub Actions, ca. 04:15/05:15 Uhr deutscher Zeit). Dasselbe Datum auch in `datePublished` (JSON-LD) und in `<p class="post-meta"><time datetime="…">` eintragen.
+3. **Entwurf ohne Datum:** Soll ein Artikel vorerst gar nicht erscheinen, zusätzlich `<meta name="blog-status" content="draft">` in den `<head>` schreiben. Zum Veröffentlichen die Zeile wieder entfernen.
+4. **Kopf anpassen:**
    - `<title>` — Artikeltitel + „| Nils Wiesmann"
-   - `<meta name="description" ...>` — 1–2 Sätze Kurzbeschreibung
+   - `<meta name="description" ...>` — 1–2 Sätze Kurzbeschreibung (für Google)
+   - `<meta name="blog-summary" ...>` — Text, der in der Blog-Übersicht unter dem Titel steht (fehlt die Zeile, wird `description` verwendet)
    - `<link rel="canonical">` und `og:url` — neue URL des Artikels
-   - `og:title`, `og:description`, `article:published_time` — wie Titel, Beschreibung und Datum
+   - `og:title`, `og:description` — wie Titel und Beschreibung
    - JSON-LD-Block (`application/ld+json`): `headline`, `description`, `datePublished`, `url`, `mainEntityOfPage` und letzter Eintrag der `BreadcrumbList`
-3. **Artikel-Header anpassen:**
-   - `<h1>` — der eigentliche Titel
-   - `<p class="post-meta">` — Datum (`datetime="JJJJ-MM-TT"` + lesbares Datum) und Tags in `<span class="blog-tags">Tag1 · Tag2</span>`
-4. **Inhalt schreiben:** Zwischen `<h2>`-Zwischenüberschriften und `<p>`-Absätzen; `<ul class="check-list">` eignet sich für Aufzählungen. Interne Links z. B. auf `../schulungen.html` oder `../index.html#kontakt`.
-5. **In der Blog-Übersicht eintragen:** In `blog.html` innerhalb `<ol class="blog-list">` einen neuen Eintrag nach diesem Muster ergänzen (am besten ganz oben, damit die neuesten Artikel zuerst erscheinen):
+   - optional `<meta property="article:modified_time" content="JJJJ-MM-TT">` bei späteren Überarbeitungen (wird als `lastmod` in die Sitemap übernommen)
+5. **Artikel-Header anpassen:** `<h1>` (Titel, erscheint auch in der Übersicht) und `<p class="post-meta">` mit Datum und Tags in `<span class="blog-tags">Tag1 · Tag2</span>` (Tags erscheinen auch in der Übersicht).
+6. **Inhalt schreiben:** Zwischen `<h2>`-Zwischenüberschriften und `<p>`-Absätzen; `<ul class="check-list">` eignet sich für Aufzählungen. Interne Links z. B. auf `../schulungen.html` oder `../index.html#kontakt`.
+7. **Vorschau:** `node tools/build.mjs --all` baut `_site/` inklusive geplanter Artikel und Entwürfe, danach `npx serve _site`. Mit `node tools/build.mjs --date=2026-12-01` lässt sich prüfen, wie die Seite an einem bestimmten Tag aussieht. Das Skript listet auf, welche Artikel veröffentlicht bzw. zurückgehalten werden, und warnt, wenn eine andere Seite schon auf einen noch nicht veröffentlichten Artikel verlinkt.
+8. **Hochladen:** In GitHub Desktop committen und „Push origin" klicken. Fertige Artikel sind nach ca. 1–2 Minuten live, geplante am eingestellten Tag.
 
-   ```html
-   <li class="blog-item">
-     <a href="blog/mein-neuer-artikel.html" class="blog-item-link">
-       <div class="blog-item-meta">
-         <time datetime="2026-10-01">01. Oktober 2026</time>
-         <span class="blog-tags">Tag1 · Tag2</span>
-       </div>
-       <h2>Mein neuer Artikel</h2>
-       <p>Kurze Zusammenfassung, die auch in der Übersicht angezeigt wird.</p>
-     </a>
-   </li>
-   ```
-
-6. **Sitemap & Blog-Liste:** In `sitemap.xml` einen `<url>`-Eintrag für den Artikel ergänzen und im JSON-LD von `blog.html` den Artikel in `blogPost` eintragen.
-7. **Veröffentlichen:** Änderungen speichern, dann in GitHub Desktop committen und auf „Push origin" klicken — nach kurzer Zeit ist der neue Artikel live.
+**Wichtig:** Das Repository ist öffentlich. Geplante Artikel und Entwürfe sind auf der Website erst ab ihrem Datum sichtbar, aber im Quellcode auf GitHub für jeden lesbar, der das Repo aufruft. Vertrauliches erst kurz vor Veröffentlichung pushen.
 
 Hinweis: `blog/*.html`-Dateien liegen eine Ebene tiefer als die Startseite, daher zeigen alle internen Links darin auf `../` (z. B. `../css/style.css`, `../index.html`).
+
+## Google Analytics und Cookie-Banner
+
+- Die Mess-ID steht in `js/script.js` (Abschnitt „Google Analytics 4 mit Einwilligung“) in `const GA_MEASUREMENT_ID = "";`. Leer = kein Banner, kein Analytics.
+- Mit gesetzter ID (`G-XXXXXXXXXX`) erscheint beim ersten Besuch ein Banner mit gleichwertigen Buttons „Ablehnen“/„Akzeptieren“. `gtag.js` wird **erst nach Zustimmung** geladen. Die Wahl liegt im `localStorage` (`nw-consent-analytics`). Über den automatisch ergänzten Footer-Link „Cookie-Einstellungen“ lässt sie sich ändern; ein Widerruf löscht die `_ga`-Cookies.
+- Konfiguration: Google Signals und Werbepersonalisierung sind im Code deaktiviert.
+- Einmalig in Google Analytics einstellen (sonst stimmt die Datenschutzerklärung nicht):
+  - Verwaltung → Kontoeinstellungen → **Zusatz zur Datenverarbeitung (Auftragsverarbeitung) akzeptieren**
+  - Verwaltung → Datenerfassung und -änderung → Datenaufbewahrung → **14 Monate**
+  - Verwaltung → Datenerfassung → **Google Signals aus**, granulare Standort- und Gerätedaten nach Bedarf aus
+- Bei Änderungen an Cookies/Diensten `datenschutz.html` (Abschnitte 6 und 7) und dessen „Stand“-Datum anpassen.
 
 ## Neue Schulungs-Detailseite hinzufügen
 
@@ -92,15 +97,22 @@ Analog zum Blog: Eine bestehende Datei aus `schulungen/` duplizieren (z. B. `sch
 
 ## Lokal ansehen
 
-Einfach `index.html` im Browser öffnen, oder z. B. mit:
+Quelldateien direkt (Blog-Übersicht ist hier leer, weil sie erst beim Build entsteht):
 
 ```
 npx serve .
 ```
 
+Veröffentlichungsstand inkl. Blog-Übersicht:
+
+```
+node tools/build.mjs
+npx serve _site
+```
+
 ## GitHub Pages / Custom Domain
 
-Die Seite ist bereits veröffentlicht: Repository `nirvananils/nirvananils.github.io` (Public), **Settings → Pages → Source: Deploy from a branch → main / (root)**. Für die Custom Domain `nilswiesmann.net` liegt eine `CNAME`-Datei im Repo (wird von GitHub automatisch angelegt/aktualisiert, sobald unter Settings → Pages eine Custom Domain eingetragen wird) — der DNS-Eintrag beim Domain-Provider muss zusätzlich auf GitHub Pages zeigen.
+Die Seite ist bereits veröffentlicht: Repository `nirvananils/nirvananils.github.io` (Public), **Settings → Pages → Source: GitHub Actions** (Workflow `.github/workflows/deploy.yml` baut mit `tools/build.mjs` und veröffentlicht `_site/`). Ein manueller Neubau ist unter Actions → „Website veröffentlichen“ → „Run workflow“ möglich. Für die Custom Domain `nilswiesmann.net` liegt eine `CNAME`-Datei im Repo (wird von GitHub automatisch angelegt/aktualisiert, sobald unter Settings → Pages eine Custom Domain eingetragen wird) — der DNS-Eintrag beim Domain-Provider muss zusätzlich auf GitHub Pages zeigen.
 
 Für ein komplett neues, unabhängiges Projekt nach diesem Muster:
 
