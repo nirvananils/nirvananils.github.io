@@ -229,3 +229,128 @@ function openLightbox(links, startIndex) {
   show();
   overlay.querySelector(".lightbox-close").focus();
 }
+
+/*
+ * Google Analytics 4 mit Einwilligung (§ 25 TDDDG, Art. 6 Abs. 1 lit. a DSGVO).
+ * gtag.js wird erst geladen, nachdem der Besucher im Banner zugestimmt hat –
+ * vorher gehen keine Daten an Google. Die Entscheidung liegt im localStorage
+ * und kann jederzeit über "Cookie-Einstellungen" im Footer geändert werden.
+ * Ohne Mess-ID (leerer String) erscheint weder Banner noch Footer-Link.
+ */
+const GA_MEASUREMENT_ID = "G-KW9K12VK40";
+const CONSENT_KEY = "nw-consent-analytics";
+
+function readConsent() {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch (e) {
+    return null;
+  }
+}
+
+function writeConsent(value) {
+  try {
+    localStorage.setItem(CONSENT_KEY, value);
+  } catch (e) {
+    /* Speicher blockiert: Entscheidung gilt nur für diesen Seitenaufruf */
+  }
+}
+
+function loadAnalytics() {
+  if (window.gtag) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+  document.head.appendChild(script);
+}
+
+/* Entfernt die GA-Cookies (_ga, _ga_<ID>) für alle in Frage kommenden Domains */
+function removeAnalyticsCookies() {
+  const host = window.location.hostname;
+  const domains = ["", host, `.${host}`, `.${host.split(".").slice(-2).join(".")}`];
+  document.cookie.split(";").forEach((cookie) => {
+    const name = cookie.split("=")[0].trim();
+    if (!/^_ga/.test(name) && name !== "_gid") return;
+    domains.forEach((domain) => {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain ? `; domain=${domain}` : ""}`;
+    });
+  });
+}
+
+function privacyHref() {
+  const link = document.querySelector('.footer-nav a[href$="datenschutz.html"]');
+  return link ? link.getAttribute("href") : "/datenschutz.html";
+}
+
+function showConsentBanner() {
+  if (document.getElementById("consentBanner")) return;
+  const banner = document.createElement("div");
+  banner.id = "consentBanner";
+  banner.className = "consent-banner";
+  banner.setAttribute("role", "dialog");
+  banner.setAttribute("aria-label", "Cookie-Einstellungen");
+  banner.innerHTML = `
+    <div class="consent-inner">
+      <p>
+        Darf ich mit <strong>Google Analytics</strong> Statistiken über die Nutzung dieser Website erheben?
+        Dafür werden Cookies gesetzt und Daten an Google (ggf. auch in die USA) übertragen.
+        Ihre Entscheidung können Sie jederzeit über „Cookie-Einstellungen“ im Seitenfuß ändern.
+        Mehr dazu in der <a href="${privacyHref()}#analytics">Datenschutzerklärung</a>.
+      </p>
+      <div class="consent-actions">
+        <button type="button" class="btn btn-ghost" data-consent="denied">Ablehnen</button>
+        <button type="button" class="btn btn-ghost" data-consent="granted">Akzeptieren</button>
+      </div>
+    </div>
+  `;
+  banner.querySelectorAll("[data-consent]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const previous = readConsent();
+      const choice = button.getAttribute("data-consent");
+      writeConsent(choice);
+      banner.remove();
+      if (choice === "granted") {
+        loadAnalytics();
+      } else if (previous === "granted") {
+        /* Widerruf: Cookies löschen und neu laden, damit gtag.js nicht weiterläuft */
+        window[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
+        removeAnalyticsCookies();
+        window.location.reload();
+      }
+    });
+  });
+  document.body.appendChild(banner);
+}
+
+if (GA_MEASUREMENT_ID) {
+  const consent = readConsent();
+  if (consent === "granted") loadAnalytics();
+  else if (consent !== "denied") showConsentBanner();
+
+  const footerNav = document.querySelector(".footer-nav");
+  if (footerNav) {
+    const settingsLink = document.createElement("a");
+    settingsLink.href = "#";
+    settingsLink.textContent = "Cookie-Einstellungen";
+    settingsLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      showConsentBanner();
+    });
+    footerNav.appendChild(settingsLink);
+  }
+}

@@ -749,3 +749,39 @@ a.gallery-link { display: block; cursor: zoom-in; }
 /* Interne Weiterlesen-Links (z. B. unter Leistungen) und Rechtshinweise */
 .arrow-link-internal { display: inline-block; margin-top: 8px; font-weight: 600; }
 .legal-hint { margin-top: 24px; color: var(--text-dim); font-size: 0.92rem; }
+
+/* Cookie-/Analytics-Einwilligung */
+.consent-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+.consent-inner { padding: 20px 22px; }
+.consent-inner p { margin: 0 0 14px; }
+.consent-inner strong { color: var(--text); }
+.consent-inner a { color: var(--accent); }
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.consent-actions .btn {
+  min-width: 140px;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+}
+@media (max-width: 520px) {
+  .consent-actions .btn { flex: 1 1 0; min-width: 0; }
+}
